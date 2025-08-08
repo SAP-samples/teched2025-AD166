@@ -1,8 +1,8 @@
-# Session ID - Session Title
+# AD166 - Taking UI to the next level: Develop SAPUI5 with SAP Build
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2025 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2025 session called AD166 - Taking UI to the next level: Develop SAPUI5 with SAP Build.
 
 ## Overview
 
