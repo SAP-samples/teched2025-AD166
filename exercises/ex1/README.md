@@ -13,7 +13,7 @@ Your customer "Keep Cool, Inc." is an operator of several icehouses across the c
 
 After completing these steps you'll have created your first UI5 application.
 
-1. Open the terminal by clicking on the icon in the upper right corner.
+1. Open the terminal by clicking on the icon in the upper left corner.
 <br><br>![](images/01_01_001.png)<br><br>
 
 2. Install [Yeoman](https://yeoman.io/) and the [Easy-UI5 generator](https://github.com/SAP/generator-easy-ui5/) via NPM by running the following command in the terminal:

@@ -28,6 +28,7 @@ After completing these steps you will know how to open SAP Business Application 
 <br><br>![](images/00_01_007.png)
 
 8. Click on your project name, e.g. *AD166_XX*, this will open your newly created  project space inside of SAP Business Application Studio.
+<br><br>![](images/00_01_008.png)
 
 9. Bookmark this URL, so it'll be easier for you to access your dev space within SAP Business Application Studio.
 
