@@ -1,26 +1,38 @@
-# Level 1 Heading
+# Getting Started
 
-In this exercise, you will...
+In this exercise, you will be guided on how to access your SAP Business Application Studio account, set up a development space, and gain a quick introduction to its functionalities.
 
-## Level 2 Heading
+## Logon
 
-After completing these steps you will have....
+After completing these steps you will know how to open SAP Business Application Studio and prepare it for development.
 
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
+1. Open the [SAP Build Lobby]() using a web browser of you choice(Google Chrome, Microsoft Edge, Apple Safari, etc.) and log in using your credentials.
 
-2.	Insert this code.
-``` abap
- DATA(params) = request->get_form_fields(  ).
- READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-```
+2. Press the "Create" button above the table and select the "Create" option.
+<br><br>![](images/00_01_001.png)
+
+3. Select "Application" and press the "Next" button.
+<br><br>![](images/00_01_002.png)
+
+4. Select "Frontend" and press the "Next" button.
+<br><br>![](images/00_01_003.png)
+
+5. Next select "SAP Fiori Application" and go to the next step.
+<br><br>![](images/00_01_004.png)
+
+6. Assign a name to your project, e.g. *AD166_XX*, where *XX* is your user number. Leave the default dev space and press on the "Review" button to reach the summary. On there, press "Create" to finish the setup.
+<br><br>![](images/00_01_005.png)
+<br><br>![](images/00_01_006.png)
+
+7. Your project alongside the dev space is being prepared and starts up. This might take a few minutes. Wait until the status shows *RUNNING*.
+<br><br>![](images/00_01_007.png)
+
+8. Click on your project name, e.g. *AD166_XX*, this will open your newly created  project space inside of SAP Business Application Studio.
+
+9. Bookmark this URL, so it'll be easier for you to access your dev space within SAP Business Application Studio.
 
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Congratulations, you completed the [Getting Started](#getting-started) exercise!
+
+Continue to [Exercise 1 - Project Setup Using Easy-UI5](../ex1/README.md).
