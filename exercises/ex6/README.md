@@ -31,7 +31,7 @@ builder:
   customTasks:
     - name: ui5-tooling-modules-task
       afterTask: ui5-tooling-transpile-task
-  	  
+
 server:
   customMiddleware:
     - name: ui5-tooling-modules-middleware
@@ -267,5 +267,9 @@ Yay! You've successfully completed [Exercise 6 - Fragment containing a SelectDia
 Continue to [Exercise 7 - Second View with Navigation](../ex7/README.md).
 
 ## Further Information
+* Using Web Components: https://ui5.sap.com/#/topic/1c80793df5bb424091954697fc0b2828
+* UI5 Web Components: https://ui5.github.io/webcomponents/
 * Usage of Fragments in UI5: https://ui5.sap.com/#/topic/d6af195124cf430599530668ddea7425
-* `sap.m.SelectDialog`: https://ui5.sap.com/#/api/sap.m.SelectDialog
+* `<ui5-button>` (Button) component: https://ui5.github.io/webcomponents/components/main/Button/
+* `<ui5-dialog>` (Dialog) component: https://ui5.github.io/webcomponents/components/Dialog/
+* `<ui5-list>` (List) component: https://ui5.github.io/webcomponents/components/List/
