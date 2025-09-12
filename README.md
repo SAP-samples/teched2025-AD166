@@ -4,34 +4,29 @@
 
 This repository contains the material for the SAP TechEd 2025 session called AD166 - Taking UI to the next level: Develop SAPUI5 with SAP Build.
 
-## Overview
-
-This session introduces attendees to...
-
-## Requirements
-
-The requirements to follow the exercises in this repository are...
-
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+By completing these exercises, you'll gain hands-on experience in developing web applications using the **SAPUI5** framework and **TypeScript**. Furthermore, you'll discover how to seamlessly integrate **UI5 Web Components** into your SAPUI5 application.
+
+In the last exercise, you will learn how to use the **UI5 Linter** to ensure your application follows the latest best practices.
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 1 - Project Setup Using Easy-UI5](exercises/ex1/) [*(browse sources)*](exercises/ex1/keepcool.sensormanager/webapp)
+- [Exercise 2 - Basic UI5 Configuration and View Creation](exercises/ex2/) [*(browse sources)*](exercises/ex2/keepcool.sensormanager/webapp)
+- [Exercise 3 - Show Sensor Content](exercises/ex3/) [*(browse sources)*](exercises/ex3/keepcool.sensormanager/webapp)
+- [Exercise 4 - Improve Visualization](exercises/ex4/) [*(browse sources)*](exercises/ex4/keepcool.sensormanager/webapp)
+- [Exercise 5 - Filtering With the IconTabBar](exercises/ex5/) [*(browse sources)*](exercises/ex5/keepcool.sensormanager/webapp)
+- [Exercise 6 - Add a Dialog using UI5 Web Components](exercises/ex6/) [*(browse sources)*](exercises/ex6/keepcool.sensormanager/webapp)
+- [Exercise 7 - Second View with Navigation](exercises/ex7/) [(browse sources)](exercises/ex7/keepcool.sensormanager/webapp)
+- [Exercise 8 - Card with NumericHeader](exercises/ex8/) [(browse sources)](exercises/ex8/keepcool.sensormanager/webapp)
 
-  
-**OR** Link to the Tutorial Navigator for example...
+#### UI5 Linter (optional)
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
+- [Exercise 9 - Migrate Existing App to Latest Best Practices using UI5 Linter](exercises/ex9/) [*(browse sources)*](exercises/ex9/keepcool.sensormanager/webapp)
 
-**IMPORTANT**
+From the list, you can not only access each exercise directly, but also browse the resulting sources and run the resulting app.
 
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+Start the exercises [here](exercises/ex0/).
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
