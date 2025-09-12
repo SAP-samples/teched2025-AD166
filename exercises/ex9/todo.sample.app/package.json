@@ -1,0 +1,32 @@
+{
+	"name": "openui5-sample-app",
+	"version": "0.5.0",
+	"description": "Sample of an OpenUI5 app",
+	"private": true,
+	"engines": {
+		"node": "^20.11.0 || >=22.0.0",
+		"npm": ">= 8"
+	},
+	"scripts": {
+		"start": "ui5 serve --port 8080",
+		"lint": "ui5lint",
+		"lint-detailed": "ui5lint --details",
+		"lint-auto-fix": "ui5lint --fix",
+		"test-runner": "ui5-test-runner --url http://localhost:8080/test/testsuite.qunit.html --start start --start-timeout 30000 --coverage -ccb 100 -ccf 100 -ccl 100 -ccs 100",
+		"test": "npm run lint && npm run test-runner",
+		"build": "ui5 build -a --clean-dest",
+		"build-self-contained": "ui5 build self-contained -a --clean-dest",
+		"serve-dist": "ws --compress -d dist"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.14.0",
+		"@ui5/cli": "^4.0.14",
+		"@ui5/linter": "^1.13.1",
+		"@ui5/middleware-code-coverage": "^2.0.1",
+		"eslint": "^9.23.0",
+		"globals": "^16.0.0",
+		"local-web-server": "^5.4.0",
+		"rimraf": "^6.0.1",
+		"ui5-test-runner": "^5.6.2"
+	}
+}
