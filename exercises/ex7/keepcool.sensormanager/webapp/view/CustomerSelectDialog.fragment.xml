@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:webc="@ui5/webcomponents">
+	<webc:Dialog>
+		<webc:List id="selectCustomers" headerText="{i18n>titleSelectCustomer}" selectionMode="Multiple" items="{sensorModel>/customers}" selectionChange=".onSelectionChange">
+			<webc:ListItemStandard text="{sensorModel>name}" icon=""/>
+		</webc:List>
+		<webc:footer>
+			<webc:Button design="Emphasized" text="{i18n>btnSelect}" click=".onCustomerSelectConfirm"/>
+			<webc:Button text="{i18n>btnCancel}" click=".onCustomerSelectCancel"/>
+		</webc:footer>
+	</webc:Dialog>
+</core:FragmentDefinition>
