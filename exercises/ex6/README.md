@@ -1,6 +1,6 @@
 [![solution](https://flat.badgen.net/badge/solution/available/green?icon=github)](keepcool.sensormanager)
 
-# Exercise 6 - Using UI5 Web Components
+# Exercise 6 - Add a Dialog using UI5 Web Components
 
 In this exercise, you will implement a dialog that enables users to select their preferred Icehouse clients using UI5 Web Components. Web Components integrate seamlessly into SAPUI5. A UI5 Web Component with its Custom Elements metadata can be included and used like any standard SAPUI5 control.
 
@@ -262,7 +262,7 @@ One last thing is missing: You need to assign the newly created functions to the
 
 ## Summary
 
-Yay! You've successfully completed [Exercise 6 - Fragment containing a SelectDialog](#exercise-6---fragment-containing-a-selectdialog).
+Yay! You've successfully completed [Exercise 6 - Add a Dialog using UI5 Web Components](#exercise-6---fragment-containing-a-selectdialog).
 
 Continue to [Exercise 7 - Second View with Navigation](../ex7/README.md).
 
