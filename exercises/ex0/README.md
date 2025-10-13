@@ -6,7 +6,7 @@ In this exercise, you will be guided on how to access your SAP Business Applicat
 
 After completing these steps you will know how to open SAP Business Application Studio and prepare it for development.
 
-1. Open the [SAP Build Lobby]() using a web browser of you choice(Google Chrome, Microsoft Edge, Apple Safari, etc.) and log in using your credentials.
+1. Open the [SAP Build Lobby](https://ad166-bis8vgc5.eu10.build.cloud.sap/lobby) using a web browser of you choice(Google Chrome, Microsoft Edge, Apple Safari, etc.) and log in using your credentials.
 
 2. Press the "Create" button above the table and select the "Create" option.
 <br><br>![](images/00_01_001.png)
