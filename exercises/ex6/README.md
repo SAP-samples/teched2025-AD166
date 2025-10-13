@@ -38,19 +38,25 @@ server:
       afterMiddleware: ui5-tooling-transpile-middleware
 ```
 
-To enable TypeScript support for UI5 Web Components during development, you need to add the following configuration to `ui5-tooling-modules-task` and `ui5-tooling-modules-middleware`.
+To enable TypeScript support for UI5 Web Components during development, you need to add the following configuration to `ui5-tooling-modules-task` and `ui5-tooling-modules-middleware`. Your `ui5.yaml` file should look like this:
 
 ```yaml
-      configuration: # add me after the properties "afterTask" and "afterMiddleware"
+builder:
+  customTasks:
+    - name: ui5-tooling-modules-task
+      afterTask: ui5-tooling-transpile-task
+      configuration:
         pluginOptions:
           webcomponents:
             skipDtsGeneration: false
-```
-
-Then run the `build` command to generate the necessary  TypeScript declaration files for the UI5 Web Components in the `node_modules/@ui5/webcomponents` directory.
-
-```bash
-npm run build
+server:
+  customMiddleware:
+    - name: ui5-tooling-modules-middleware
+      afterMiddleware: ui5-tooling-transpile-middleware
+      configuration:
+        pluginOptions:
+          webcomponents:
+            skipDtsGeneration: false
 ```
 
 ## Exercise 6.2 - Install UI5 Web Components Packages
@@ -69,6 +75,12 @@ Your `package.json` file should now include the installed UI5 Web Components pac
 		"@ui5/webcomponents": "^2.9.0"
 	}
 }
+```
+
+Then run the `build` command to generate the necessary  TypeScript declaration files for the UI5 Web Components in the `node_modules/@ui5/webcomponents` directory.
+
+```bash
+npm run build
 ```
 
 Done! You are now set to integrate UI5 Webcomponents into your application.
@@ -116,21 +128,21 @@ After creating the dialog, you need to implement the coding to open the dialog.
 	***keepcool.sensormanager/webapp/controller/Sensors.controller.ts***
 
 	```ts
-		private dialog: Promise<Dialog>;
+		private dialogPromise: Promise<Dialog>;
 
 		onCustomerSelect(): void{
-			if(!(this.dialog instanceof Promise)) {
-				this.dialog = this.loadFragment({
+			if(!(this.dialogPromise instanceof Promise)) {
+				this.dialogPromise = this.loadFragment({
 					name: "keepcool.sensormanager.view.CustomerSelectDialog"
 				}).then((control: Control|Control[]) => (control instanceof Array ? control[0] : control) as Dialog);
 			}
 
-			this.dialog.then(function(dialog){
+			this.dialogPromise.then((dialog: Dialog) => {
 				const page = this.byId("sensors") as Page;
 				page.addContent(dialog);
-				dialog.open("");
-			}.bind(this))
-			.catch(function(err: Error){
+				dialog.setOpen(true);
+			})
+			.catch((err: Error) => {
 				MessageToast.show(err.message);
 			});
 		}
@@ -198,7 +210,7 @@ Now you are able to select the preferred customers, you need to implement the lo
 			const listBinding = this.getView()?.byId("sensorsList")?.getBinding("items") as ListBinding;
 			listBinding.filter(this.customFilters.concat(this.statusFilters));
 
-			this.dialog.then((dialog) => {
+			this.dialogPromise.then((dialog) => {
 				dialog.setOpen(false);
 			});
 		}
@@ -210,7 +222,7 @@ Now you are able to select the preferred customers, you need to implement the lo
 
 	````ts
 		onCustomerSelectCancel(): void {
-			this.dialog.then((dialog) => {
+			this.dialogPromise.then((dialog) => {
 				dialog.setOpen(false);
 			});
 		}

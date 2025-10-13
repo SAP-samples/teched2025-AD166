@@ -58,7 +58,7 @@
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
-				"viewPath": "keepcool.sensormanager.view",
+				"path": "keepcool.sensormanager.view",
 				"controlId": "app",
 				"controlAggregation": "pages",
 				"async": true

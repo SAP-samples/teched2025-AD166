@@ -55,20 +55,20 @@ export default class Sensors extends BaseController {
 		listBinding.filter(this.statusFilters.concat(this.customFilters));
 	}
 
-	private dialog: Promise<Dialog>;
+	private dialogPromise: Promise<Dialog>;
 
 	onCustomerSelect(): void{
-		if(!(this.dialog instanceof Promise)) {
-			this.dialog = this.loadFragment({
+		if(!(this.dialogPromise instanceof Promise)) {
+			this.dialogPromise = this.loadFragment({
 				name: "keepcool.sensormanager.view.CustomerSelectDialog"
 			}).then((control: Control|Control[]) => (control instanceof Array ? control[0] : control) as Dialog);
 		}
 
-		this.dialog.then((dialog) => {
+		this.dialogPromise.then((dialog: Dialog) => {
 			const page = this.byId("sensors") as Page;
 			page.addContent(dialog);
 			dialog.setOpen(true);
-		}).catch(function(err: Error){
+		}).catch((err: Error) => {
 			MessageToast.show(err.message);
 		});
 	}
@@ -85,13 +85,13 @@ export default class Sensors extends BaseController {
 		const listBinding = this.getView()?.byId("sensorsList")?.getBinding("items") as ListBinding;
 		listBinding.filter(this.customFilters.concat(this.statusFilters));
 
-		this.dialog.then((dialog) => {
+		this.dialogPromise.then((dialog: Dialog) => {
 			dialog.setOpen(false);
 		});
 	}
 
 	onCustomerSelectCancel(): void {
-		this.dialog.then((dialog) => {
+		this.dialogPromise.then((dialog: Dialog) => {
 			dialog.setOpen(false);
 		});
 	}

@@ -18,14 +18,12 @@ Below you will find instructions on how to create a view manually. As an alterna
     Please create a new view and controller named SensorStatus. Additionally, add the corresponding routing information to the application's manifest file (manifest.json). You may add new code to the existing files Sensor.view.xml and Sensor.controller.ts, but ensure that no existing code in these files is removed.
     ```
 
-    Feel free to experiment with the prompt and Joule.
+    Feel free to experiment with the prompt and Joule. It may take a moment to receive a response, but you should see a similar result as shown in the screenshot below.
 
-    It may take a moment to receive a response, but you should see a similar result as shown in the screenshot below.
-
-1. Now you can decide whether you want to apply the suggested change or whether you want to refine or ignore it.
+3. Now you can decide whether you want to apply the suggested change by pressing the **'Accept'** button or whether you want to refine or ignore it.
 <br><br>![](images/07_01_002.png)<br><br>
 
-1. Within the tutorial, it's necessary to go through the steps below and check the created code. This is essential because the result of the prompt can vary, and to ensure that the further tutorial steps are still valid, it's necessary to sync your created code with the tutorial.
+4. Within the tutorial, it's necessary to go through the steps below and check the created code. This is essential because the result of the prompt can vary, and to ensure that the further tutorial steps are still valid, it's necessary to sync your created code with the tutorial.
 
 > [!NOTE]
 > There are currently three UI5-related Joule commands. You can also use `/ui5` to ask Joule to explain specific UI5 coding, or use `/ui5-typescript` to get help migrating your UI5 JavaScript project to TypeScript.

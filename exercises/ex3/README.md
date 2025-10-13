@@ -29,7 +29,7 @@ After adding the sensor data to your application, you'll need to configure the d
 
 1. Open the `manifest.json` file. You can find the `manifest.json` file located under `keepcool.sensormanager/webapp/`.
 
-2. Go to the section `sap.app`. Here, replace the `dataSources` section as follwowing:
+2. Go to the section `sap.app`. Here, add the `dataSources` section as following:
 
 	***keepcool.sensormanager/webapp/manifest.json***
 
@@ -47,7 +47,7 @@ After adding the sensor data to your application, you'll need to configure the d
 
 The `sensorSource`, points to the sensor data which has just beed added to the `localService` folder.
 
-3. Go to the section `sap.ui5`. Here, replace the `models`section as following:
+3. Go to the section `sap.ui5`. Here, add the `sensorModel` to the `models` section as following:
 
 	***keepcool.sensormanager/webapp/manifest.json***
 

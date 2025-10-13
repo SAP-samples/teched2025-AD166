@@ -56,7 +56,7 @@ In the previous section you've added all necessary controls. Next, you'll implem
 
 1. Open `keepcool.sensormanager/webapp/model/formatter.ts`.
 
-2. Export the enum `Treshold`. This will allow you to create the
+2. Export the enum `Threshold`. This will allow you to import it in the controller later on.
 
 	```ts
 	export const enum Threshold {
@@ -67,7 +67,7 @@ In the previous section you've added all necessary controls. Next, you'll implem
 
 3. Open `keepcool.sensormanager/webapp/controller/Sensors.controller.ts`.
 
-4. Import the `Treshold` enum, that you just exported from the `formatter.ts` file.
+4. Import the `Threshold` enum, that you just exported from the `formatter.ts` file.
 
 	```ts
 	import { Threshold } from "../model/formatter";
@@ -145,7 +145,7 @@ The filtering logic has been written. Next, you need to assign the filtering fun
 	````
 
 3. Let's see if your UI5 application is now able to filter the sensor data correctly. Switch to the browser tab with the opened application preview and reload the page. Click the *Too Hot* icon. Only sensors with too high temperature are displayed.
-<br><br>![](images/05_01_002.png)<br><br>
+<br><br>![](images/05_01_001.png)<br><br>
 
 ## Exercise 5.4 - Display the Total Number of Sensors in Every IconTabFilter
 
@@ -153,7 +153,7 @@ Your customer wishes to display the total number of sensors as well. For this, y
 
 1. Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
 
-2. Make use of an expression binding by adding the `count` property and the expression binding `{=${sensorModel>/sensors}.length}`.
+2. Make use of an expression binding by adding the `count` property and the expression binding `{=${sensorModel>/sensors}.length}` to the `IconTabFilter` with `key="All"`.
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -166,7 +166,7 @@ Your customer wishes to display the total number of sensors as well. For this, y
 	````
 
 3. Let's see if your UI5 application can display the total number of sensors correctly. Switch to the browser tab with the opened application preview and reload the page. Do you see *100*? Yeah!
-<br><br>![](images/05_01_001.png)<br><br>
+<br><br>![](images/05_01_002.png)<br><br>
 
 ## Summary
 
