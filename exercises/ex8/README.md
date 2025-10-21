@@ -222,7 +222,7 @@ Open `keepcool.sensormanager/webapp/model/formatter.ts` and add the formatter fu
 
 ---
 
-**📚 Next Steps**: Continue to [Exercise 9](#) or explore additional UI5 features.
+**📚 Next Steps**: Continue to [Exercise 9](../ex9/README.md) or explore additional UI5 features.
 
 ## Further Information
 > 📚 **Additional Resources**:
