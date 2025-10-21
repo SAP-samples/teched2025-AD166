@@ -2,21 +2,38 @@
 
 # Exercise 7 - Add a Second View with Navigation
 
-Your customer does not only want to have a broad overview of all their icehouses. In case of an error they'd like to inspect a sensor for recent temperature data. You'll add a second view to display more available data.
+## Background & Context
+> 📖 **What you'll learn**: Your customer does not only want to have a broad overview of all their icehouses. In case of an error they'd like to inspect a sensor for recent temperature data. You'll add a second view to display more available data.
 
-## Create a new view using 'Joule'
-Below you will find instructions on how to create a view manually. As an alternative, you can try creating your view using Joule.
+## Learning Objectives
+> 🎯 **After completing these steps** you will have:
+> - Created a second view for detailed sensor information
+> - Implemented navigation between views
+> - Set up routing for the new view
+> - Added navigation functionality to sensor cards
 
-1. Click on the 'Joule' symbol in the left side pane. You should see the 'Joule' chat panel.
-<br><br>![](images/07_01_001.png)<br><br>
+## Exercise Steps
 
-2.  Start your prompt with the command `/ui5-create-page` and add additional input such as the name of the view and any specific information.
+### Create a new view using 'Joule'
 
-    A good example for a prompt in this tutorial step would be:
+📋 **Action Required**: Create a new view either manually or using Joule AI assistance.
 
-    ```text
-    Please create a new view and controller named SensorStatus. Additionally, add the corresponding routing information to the application's manifest file (manifest.json). You may add new code to the existing files Sensor.view.xml and Sensor.controller.ts, but ensure that no existing code in these files is removed.
-    ```
+> 💡 **Alternative Option**: Below you will find instructions on how to create a view manually. As an alternative, you can try creating your view using Joule.
+
+1. **Access Joule AI assistant**
+   
+   Click on the 'Joule' symbol in the left side pane. You should see the 'Joule' chat panel.
+   <br><br>![](images/07_01_001.png)<br><br>
+
+2. **Use the UI5 creation command**
+   
+   Start your prompt with the command `/ui5-create-page` and add additional input such as the name of the view and any specific information.
+
+   A good example for a prompt in this tutorial step would be:
+
+   ```text
+   Please create a new view and controller named SensorStatus. Additionally, add the corresponding routing information to the application's manifest file (manifest.json). You may add new code to the existing files Sensor.view.xml and Sensor.controller.ts, but ensure that no existing code in these files is removed.
+   ```
 
     Feel free to experiment with the prompt and Joule. It may take a moment to receive a response, but you should see a similar result as shown in the screenshot below.
 
@@ -28,18 +45,28 @@ Below you will find instructions on how to create a view manually. As an alterna
 > [!NOTE]
 > There are currently three UI5-related Joule commands. You can also use `/ui5` to ask Joule to explain specific UI5 coding, or use `/ui5-typescript` to get help migrating your UI5 JavaScript project to TypeScript.
 
-## Exercise 7.1 - Create SensorStatus.view.xml
+### Exercise 7.1 - Create SensorStatus.view.xml
 
-Create a new view as follows:
+📋 **Action Required**: Create the view file for sensor status details.
 
-1. Go to folder `keepcool.sensormanager/webapp/view/`.
+> 📖 **Context**: Create a new view as follows:
 
-2. Right-click on the `view` folder and select `New File`.
+1. **Navigate to the view folder**
+   
+   Go to folder `keepcool.sensormanager/webapp/view/`.
 
-1. Enter `SensorStatus.view.xml` as file name.
-<br><br>![](images/07_01_003.png)<br><br>
+2. **Create new file**
+   
+   Right-click on the `view` folder and select `New File`.
 
-1. Add an empty `sap.m.Page` to the newly created view.
+3. **Name the view file**
+   
+   Enter `SensorStatus.view.xml` as file name.
+   <br><br>![](images/07_01_003.png)<br><br>
+
+4. **Add the page structure**
+   
+   Add an empty `sap.m.Page` to the newly created view.
 
     ***keepcool.sensormanager/webapp/view/SensorStatus.view.xml***
 
@@ -56,11 +83,15 @@ Create a new view as follows:
     </mvc:View>
     ```
 
-## Exercise 7.2 - Configure the `manifest.json` file
+### Exercise 7.2 - Configure the `manifest.json` file
 
-After creating the new view, you'll next add routing information for it to the `manifest.json` file.
+📋 **Action Required**: Add routing configuration for the new view.
 
-1. Open `keepcool.sensormanager/webapp/manifest.json`.
+> 📖 **Context**: After creating the new view, you'll next add routing information for it to the `manifest.json` file.
+
+1. **Open the manifest file**
+   
+   Open `keepcool.sensormanager/webapp/manifest.json`.
 
 2. Go to section `sap.ui5` / `routing` / `routes`.
 
@@ -201,11 +232,20 @@ Next you need to implement the navigation logic. You can use another functionali
 
 ## Summary
 
-Congratulations, you completed [Exercise 7 - Second View with Navigation](#exercise-7---second-view-with-navigation)!
+> ✅ **Congratulations!** You completed [Exercise 7 - Second View with Navigation](#exercise-7---second-view-with-navigation)!
+> 
+> **What you accomplished**:
+> - ✓ Created a second view for detailed sensor information
+> - ✓ Implemented navigation between views using routing
+> - ✓ Set up proper routing configuration
+> - ✓ Added navigation functionality to sensor cards
+> - ✓ Learned to use Joule AI for UI5 development
 
-Continue to [Exercise 8 - Card with NumericHeader](../ex8/README.md).
+---
 
+**📚 Next Steps**: Continue to [Exercise 8 - Card with NumericHeader](../ex8/README.md).
 
 ## Further Information
 
-* Routing in UI5: https://ui5.sap.com/#/topic/902313063d6f45aeaa3388cc4c13c34e
+> 📚 **Additional Resources**:
+> * [Routing in UI5](https://ui5.sap.com/#/topic/902313063d6f45aeaa3388cc4c13c34e)

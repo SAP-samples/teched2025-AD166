@@ -2,34 +2,64 @@
 
 # Exercise 3 - Show Sensor Content
 
-In this exercise you'll add a local data service to the application and display the data on the enhanced UI5 view.
+## Background & Context
+> 📖 **What you'll learn**: In this exercise you'll add a local data service to the application and display the data on the enhanced UI5 view.
 
-## Exercise 3.1 - Import Sensor Data
+## Learning Objectives
+> 🎯 **After completing these steps** you will have:
+> - Added local sensor data to your application
+> - Configured a JSON data service
+> - Created a GridList to display sensor information
+> - Implemented data binding to connect your UI with the data
 
-To simulate a source providing sensor data, you'll now add some sensor data to your application.
+## Exercise Steps
 
-1. Rightclick on the `sensormanager/webapp/` folder and select *New Folder*.
-<br><br>![](images/03_01_001.png)<br><br>
+### Exercise 3.1 - Import Sensor Data
 
-2. Enter *localService* as the folder name.
+📋 **Action Required**: Add sensor data to simulate a data source.
 
-3. Right-click on the `localService` folder.
+> 📖 **Context**: To simulate a source providing sensor data, you'll now add some sensor data to your application.
 
-4. Select `New File`.
-<br><br>![](images/03_01_002.png)<br><br>
+1. **Create a local service folder**
+   
+   Right-click on the `sensormanager/webapp/` folder and select *New Folder*.
+   <br><br>![](images/03_01_001.png)<br><br>
 
-5. Enter `sensors.json` as file name.
-<br><br>![](images/03_01_003.png)<br><br>
+2. **Name the folder**
+   
+   Enter *localService* as the folder name.
 
-6. Copy and paste the content of [sensors.json](data/sensors.json) into the newly created file.
+3. **Create a new file**
+   
+   Right-click on the `localService` folder.
 
-## Exercise 3.2 - Configure a Data Service
+4. **Select file creation option**
+   
+   Select `New File`.
+   <br><br>![](images/03_01_002.png)<br><br>
 
-After adding the sensor data to your application, you'll need to configure the data service which provides the sensor data.
+5. **Name the data file**
+   
+   Enter `sensors.json` as file name.
+   <br><br>![](images/03_01_003.png)<br><br>
 
-1. Open the `manifest.json` file. You can find the `manifest.json` file located under `keepcool.sensormanager/webapp/`.
+6. **Add sensor data**
+   
+   Copy and paste the content of [sensors.json](data/sensors.json) into the newly created file.
 
-2. Go to the section `sap.app`. Here, add the `dataSources` section as following:
+### Exercise 3.2 - Configure a Data Service
+
+📋 **Action Required**: Set up the data service configuration for sensor data.
+
+> 📖 **Context**: After adding the sensor data to your application, you'll need to configure the data service which provides the sensor data.
+
+1. **Open the manifest.json file**
+   
+   Open the `manifest.json` file. You can find the `manifest.json` file located under `keepcool.sensormanager/webapp/`.
+
+2. **Add data sources configuration**
+   
+   Go to the section `sap.app`. Here, add the `dataSources` section as following:
 
 	***keepcool.sensormanager/webapp/manifest.json***
 
@@ -45,9 +75,11 @@ After adding the sensor data to your application, you'll need to configure the d
 		}
 	````
 
-The `sensorSource`, points to the sensor data which has just beed added to the `localService` folder.
+   > 💡 **Explanation**: The `sensorSource`, points to the sensor data which has just beed added to the `localService` folder.
 
-3. Go to the section `sap.ui5`. Here, add the `sensorModel` to the `models` section as following:
+3. **Configure the data model**
+   
+   Go to the section `sap.ui5`. Here, add the `sensorModel` to the `models` section as following:
 
 	***keepcool.sensormanager/webapp/manifest.json***
 
@@ -69,16 +101,21 @@ The `sensorSource`, points to the sensor data which has just beed added to the `
 			},
 	````
 
-The `JSONModel` with name `sensorModel` is defined here which will serve as the central datapoint in the application.
-Note that this model is referencing the data source that has been created prior to the model.
+   > 💡 **Explanation**: The `JSONModel` with name `sensorModel` is defined here which will serve as the central datapoint in the application. Note that this model is referencing the data source that has been created prior to the model.
 
-## Exercise 3.3 - Add a GridList
+### Exercise 3.3 - Add a GridList
 
-After configuring the data service, it's now time to enrich your `Sensors.view.xml` with some fancy UI5 controls!
+📋 **Action Required**: Enhance your view with UI5 controls to display sensor data.
 
-1. Open the `Sensors.view.xml` located under `keepcool.sensormanager/webapp/view/`.
+> 📖 **Context**: After configuring the data service, it's now time to enrich your `Sensors.view.xml` with some fancy UI5 controls!
 
-2. Add `sap.f` and `sap.ui.layout.cssgrid` to the xml namespace declarations to make sure that the required resources are available in your view.
+1. **Open the Sensors view**
+   
+   Open the `Sensors.view.xml` located under `keepcool.sensormanager/webapp/view/`.
+
+2. **Add required namespaces**
+   
+   Add `sap.f` and `sap.ui.layout.cssgrid` to the xml namespace declarations to make sure that the required resources are available in your view.
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -92,7 +129,11 @@ After configuring the data service, it's now time to enrich your `Sensors.view.x
 		displayBlock="true">
 	````
 
-3. Add `sap.f.GridList` by replacing the IllustratedMessage control in the `content` aggregation of the IconTabBar. An aggregation is a relation between two UI elements. It is used to define the parent-child relationship within the tree structure. The child end of the relation may have cardinality 0..1 or 0..*. The elements' API offers convenient and consistent methods to deal with aggregations (e.g. to get, set, or remove child elements). Examples are table rows and cells, or the content of a table cell.
+3. **Add GridList control**
+   
+   Add `sap.f.GridList` by replacing the IllustratedMessage control in the `content` aggregation of the IconTabBar.
+   
+   > 💡 **About Aggregations**: An aggregation is a relation between two UI elements. It is used to define the parent-child relationship within the tree structure. The child end of the relation may have cardinality 0..1 or 0..*. The elements' API offers convenient and consistent methods to deal with aggregations (e.g. to get, set, or remove child elements). Examples are table rows and cells, or the content of a table cell.
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -115,19 +156,28 @@ After configuring the data service, it's now time to enrich your `Sensors.view.x
 					</content>
 	```
 
-4. Switch browser tabs and refresh to see the updated UI5 application.
-<br><br>![](images/03_01_004.png)<br><br>
+4. **Test the updated application**
+   
+   Switch browser tabs and refresh to see the updated UI5 application.
+   
+   > ✅ **Expected Result**:
+   <br><br>![](images/03_01_004.png)<br><br>
 
-> [!NOTE]
-> Find out more about the [Grid List in the SAP Design System Guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-list/).
+> 📚 **Additional Info**: Find out more about the [Grid List in the SAP Design System Guidelines](https://www.sap.com/design-system/fiori-design-web/ui-elements/grid-list/).
 
-## Exercise 3.4 - Add Data Binding
+### Exercise 3.4 - Add Data Binding
 
-After adding the `sap.f.GridList` control, you'll need to connect the control to the sensor data. For this, UI5 provides a mechanism called *Data Binding*.
+📋 **Action Required**: Connect your UI controls to the sensor data using data binding.
 
-1. Open the `Sensors.view.xml` located under `keepcool.sensormanager/webapp/view/`.
+> 📖 **Context**: After adding the `sap.f.GridList` control, you'll need to connect the control to the sensor data. For this, UI5 provides a mechanism called *Data Binding*.
 
-2. Bind the `items` aggregation of the `sap.f.GridList` to the path `sensorModel>/sensors`. Here, `sensorModel` is  the name of your recently defined data model, and `/sensors` points to a property inside it. As this is an array with several entries, you'd probably like to define sorting and grouping as well. In the `sorter` you can configure this by using the properties available:
+1. **Open the Sensors view**
+   
+   Open the `Sensors.view.xml` located under `keepcool.sensormanager/webapp/view/`.
+
+2. **Configure data binding for the GridList**
+   
+   Bind the `items` aggregation of the `sap.f.GridList` to the path `sensorModel>/sensors`. Here, `sensorModel` is the name of your recently defined data model, and `/sensors` points to a property inside it. As this is an array with several entries, you'd probably like to define sorting and grouping as well. In the `sorter` you can configure this by using the properties available:
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -144,7 +194,9 @@ After adding the `sap.f.GridList` control, you'll need to connect the control to
 								}">
 	````
 
-3. The list items are defined once as a template, which is then repeated multiple times to represent each entry of the sensors array. We also add some location details to our `sap.m.CustomListItem`. Here, `location` references the location property of each of the displayed sensor items. Replace the comment `<!-- item template will be added here!>` with the following template:
+3. **Add item template**
+   
+   The list items are defined once as a template, which is then repeated multiple times to represent each entry of the sensors array. We also add some location details to our `sap.m.CustomListItem`. Here, `location` references the location property of each of the displayed sensor items. Replace the comment `<!-- item template will be added here!>` with the following template:
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -154,15 +206,28 @@ After adding the `sap.f.GridList` control, you'll need to connect the control to
 								</CustomListItem>
 	````
 
-4. Let's see if our UI5 application displays the correct sensor data. Switch to the browser tab with the opened application preview and reload the page.
-<br><br>![](images/03_01_005.png)<br><br>
+4. **Verify the data display**
+   
+   Let's see if our UI5 application displays the correct sensor data. Switch to the browser tab with the opened application preview and reload the page.
+   
+   > ✅ **Expected Result**:
+   <br><br>![](images/03_01_005.png)<br><br>
 
 ## Summary
 
-Congratulations! You've completed successully [Exercise 3 - Show Sensor Content](#exercise-3---show-sensor-content).
+> ✅ **Congratulations!** You've completed successfully [Exercise 3 - Show Sensor Content](#exercise-3---show-sensor-content)!
+> 
+> **What you accomplished**:
+> - ✓ Added local sensor data to your application
+> - ✓ Configured a JSON data service and model
+> - ✓ Created a GridList with proper layout
+> - ✓ Implemented data binding to display sensor information
 
-Continue to [Exercise 4 - Improve Visualization](../ex4/README.md).
+---
+
+**📚 Next Steps**: Continue to [Exercise 4 - Improve Visualization](../ex4/README.md).
 
 ## Further Information
 
-* Data Binding: https://ui5.sap.com/#/topic/68b9644a253741e8a4b9e4279a35c247
+> 📚 **Additional Resources**:
+> * [Data Binding](https://ui5.sap.com/#/topic/68b9644a253741e8a4b9e4279a35c247)

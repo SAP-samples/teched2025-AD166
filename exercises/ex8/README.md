@@ -2,18 +2,31 @@
 
 # Exercise 8 - Card with NumericHeader
 
-In this exercise you'll enhance the sensor status page with an `sap.f.Card` to show more data about the sensor's status. You'll add some layouting with box controls and add an `sap.f.cards.NumericHeader` to properly display the temperature.
+## Background & Context
+> 📖 **What you'll learn**: In this exercise you'll enhance the sensor status page with an `sap.f.Card` to show more data about the sensor's status. You'll add some layouting with box controls and add an `sap.f.cards.NumericHeader` to properly display the temperature.
 
-> [!NOTE]
-> Cards are containers for a few short, related pieces of information. The [web card system](https://www.sap.com/design-system/fiori-design-web/ui-elements/web-card-system/) provides definitions for several building blocks to create a variety of different cards.
+> 📚 **About Cards**: Cards are containers for a few short, related pieces of information. The [web card system](https://www.sap.com/design-system/fiori-design-web/ui-elements/web-card-system/) provides definitions for several building blocks to create a variety of different cards.
 
-## Exercise 8.1 - Add a Card to SensorStatus.view.xml
+## Learning Objectives
+> 🎯 **After completing these steps** you will have:
+> - Enhanced the sensor status page with professional cards
+> - Implemented NumericHeader for temperature display
+> - Added proper layouting with box controls
+> - Created a comprehensive sensor detail view
 
-Now you'll dress up the `SensorStatus.view.xml` view.
+## Exercise Steps
 
-1. Open `keepcool.keepcool.sensormanager/webapp/view/SensorStatus.view.xml`.
+### Exercise 8.1 - Add a Card to SensorStatus.view.xml
 
-2. Add the `sap.f`, `sap.f.cards` and `sap.ui.core` libraries to `SensorStatus.view.xml`.
+📋 **Action Required**: Enhance the sensor status view with card components.
+
+1. **Open the SensorStatus view**
+   
+   Open `keepcool.keepcool.sensormanager/webapp/view/SensorStatus.view.xml`.
+
+2. **Add required namespaces**
+   
+   Add the `sap.f`, `sap.f.cards` and `sap.ui.core` libraries to `SensorStatus.view.xml`.
 
 	***keepcool.sensormanager/webapp/view/SensorStatus.view.xml***
 
@@ -61,9 +74,11 @@ Now you'll dress up the `SensorStatus.view.xml` view.
 		</Page>
 	````
 
-## Exercise 8.2 - Enhance SensorStatus.controller.ts
+### Exercise 8.2 - Enhance SensorStatus.controller.ts
 
-To be able to show the data in your card, you need to assign the correct binding context using the information provided by the navigation step.
+📋 **Action Required**: Add controller logic to manage sensor data binding.
+
+> 📖 **Context**: To be able to show the data in your card, you need to assign the correct binding context using the information provided by the navigation step.
 
 1. Open `keepcool.sensormanager/webapp/controller/SensorStatus.controller.ts`.
 
@@ -87,7 +102,9 @@ To be able to show the data in your card, you need to assign the correct binding
 3. Switch to the browser tab where the application preview is opened. Click any sensor. Now the sensor status page contains a card with the customer name.
 <br><br>![](images/08_01_001.png)<br><br>
 
-## Exercise 8.3 - Add a NumericHeader to the Card
+### Exercise 8.3 - Add a NumericHeader to the Card
+
+📋 **Action Required**: Implement a NumericHeader for temperature display.
 
 To improve the visualization further, you will replace the `sap.f.card.Header` by the `sap.f.cards.NumericHeader` in your newly created card.
 
@@ -192,10 +209,24 @@ Open `keepcool.sensormanager/webapp/model/formatter.ts` and add the formatter fu
 
 ## Summary
 
-Yay! You've successfully completed [Exercise 8 - Card with NumericHeader](#exercise-8---card-with-numericheader). Great! You've just finished a basic UI5 application and became one step closer in becoming a UI5 expert.
+> ✅ **Congratulations!** You've successfully completed [Exercise 8 - Card with NumericHeader](#exercise-8---card-with-numericheader)!
+> 
+> **What you accomplished**:
+> - ✓ Enhanced the sensor status page with professional cards
+> - ✓ Implemented NumericHeader for temperature display
+> - ✓ Added proper layouting with box controls
+> - ✓ Created a comprehensive sensor detail view
+> - ✓ Applied conditional formatting based on temperature values
+
+> 🎉 **Great Achievement**: You've just finished a basic UI5 application and became one step closer to becoming a UI5 expert!
+
+---
+
+**📚 Next Steps**: Continue to [Exercise 9](#) or explore additional UI5 features.
 
 ## Further Information
-* Cards: https://ui5.sap.com/#/topic/5b46b03f024542ba802d99d67bc1a3f4
-* `sap.f.Card`: https://ui5.sap.com/#/api/sap.f.Card
-* `sap.f.cards.NumericHeader`: https://ui5.sap.com/#/api/sap.f.cards.NumericHeader
-* Methods and Events for Navigation: https://ui5.sap.com/#/topic/516e477e7e0b4e188b19a406e7528c1e
+> 📚 **Additional Resources**:
+> * [Cards](https://ui5.sap.com/#/topic/5b46b03f024542ba802d99d67bc1a3f4)
+> * [`sap.f.Card`](https://ui5.sap.com/#/api/sap.f.Card)
+> * [`sap.f.cards.NumericHeader`](https://ui5.sap.com/#/api/sap.f.cards.NumericHeader)
+> * [Methods and Events for Navigation](https://ui5.sap.com/#/topic/516e477e7e0b4e188b19a406e7528c1e)

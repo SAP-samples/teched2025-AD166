@@ -2,11 +2,25 @@
 
 # Exercise 6 - Add a Dialog using UI5 Web Components
 
-In this exercise, you will implement a dialog that enables users to select their preferred Icehouse clients using UI5 Web Components. Web Components integrate seamlessly into SAPUI5. A UI5 Web Component with its Custom Elements metadata can be included and used like any standard SAPUI5 control.
+## Background & Context
+> 📖 **What you'll learn**: In this exercise, you will implement a dialog that enables users to select their preferred Icehouse clients using UI5 Web Components. Web Components integrate seamlessly into SAPUI5. A UI5 Web Component with its Custom Elements metadata can be included and used like any standard SAPUI5 control.
 
-## Exercise 6.1 - Prepare your Project
+## Learning Objectives
+> 🎯 **After completing these steps** you will have:
+> - Configured your project to use UI5 Web Components
+> - Installed and set up the necessary tooling extensions
+> - Created a customer selection dialog
+> - Implemented Web Components integration with UI5
 
-Before using external Web Components packages in your application, start by preparing your project. Add the `ui5-tooling-modules` UI5 Tooling extension and configure your `ui5.yaml` file. The `ui5-tooling-modules` extension allows for handling npm dependencies, including the UI5 Web Components.
+## Exercise Steps
+
+### Exercise 6.1 - Prepare your Project
+
+📋 **Action Required**: Configure your project for UI5 Web Components.
+
+> 📖 **Context**: Before using external Web Components packages in your application, start by preparing your project. Add the `ui5-tooling-modules` UI5 Tooling extension and configure your `ui5.yaml` file. The `ui5-tooling-modules` extension allows for handling npm dependencies, including the UI5 Web Components.
+
+**Install the required extension**
 
 Run the following command in the terminal to add the `ui5-tooling-modules` extension to your project:
 
@@ -14,7 +28,7 @@ Run the following command in the terminal to add the `ui5-tooling-modules` exten
 npm install ui5-tooling-modules --save-dev -rte
 ```
 
-This adds the extension to your project's `package.json` under `devDependencies`, similar to the example below:
+> 💡 **Expected Result**: This adds the extension to your project's `package.json` under `devDependencies`, similar to the example below:
 
 ```json
 {
@@ -59,15 +73,21 @@ server:
             skipDtsGeneration: false
 ```
 
-## Exercise 6.2 - Install UI5 Web Components Packages
+### Exercise 6.2 - Install UI5 Web Components Packages
 
-There are several UI5 Web Components packages available that you can use in your application. In this exercise, we will use the `Dialog` and `List` components from the `@ui5/webcomponents` package. To install them, open the terminal and run the following command:
+📋 **Action Required**: Install the required UI5 Web Components packages.
+
+> 📖 **Context**: There are several UI5 Web Components packages available that you can use in your application. In this exercise, we will use the `Dialog` and `List` components from the `@ui5/webcomponents` package.
+
+**Install the Web Components package**
+
+To install them, open the terminal and run the following command:
 
 ```bash
 npm install @ui5/webcomponents
 ```
 
-Your `package.json` file should now include the installed UI5 Web Components packages under `dependencies` as following:
+> 💡 **Expected Result**: Your `package.json` file should now include the installed UI5 Web Components packages under `dependencies` as following:
 
 ```json
 {
@@ -77,23 +97,33 @@ Your `package.json` file should now include the installed UI5 Web Components pac
 }
 ```
 
-Then run the `build` command to generate the necessary  TypeScript declaration files for the UI5 Web Components in the `node_modules/@ui5/webcomponents` directory.
+**Generate TypeScript declarations**
+
+Then run the `build` command to generate the necessary TypeScript declaration files for the UI5 Web Components in the `node_modules/@ui5/webcomponents` directory.
 
 ```bash
 npm run build
 ```
 
-Done! You are now set to integrate UI5 Webcomponents into your application.
+> ✅ **Success**: You are now set to integrate UI5 Webcomponents into your application.
 
-## Exercise 6.3 - Create a new Fragment Definition
+### Exercise 6.3 - Create a new Fragment Definition
 
-A dialog is a perfect scenario in which to use a `sap.ui.core.Fragment`. This UI5 artefact allows you to modularize your code in smaller reusable pieces.
+📋 **Action Required**: Create a dialog fragment for customer selection.
 
-1. Go to folder `keepcool.sensormanager/webapp/view/`.
+> 📖 **Context**: A dialog is a perfect scenario in which to use a `sap.ui.core.Fragment`. This UI5 artefact allows you to modularize your code in smaller reusable pieces.
 
-2. Right-click on the `view` folder and select `New File`.
+1. **Navigate to the view folder**
+   
+   Go to folder `keepcool.sensormanager/webapp/view/`.
 
-3. Enter `CustomerSelectDialog.fragment.xml` as file name.
+2. **Create a new file**
+   
+   Right-click on the `view` folder and select `New File`.
+
+3. **Name the fragment file**
+   
+   Enter `CustomerSelectDialog.fragment.xml` as file name.
 <br><br>![](images/06_01_002.png)<br><br>
 
 4. Copy and paste the following content into the newly created `CustomerSelectDialog.fragment.xml`. This step will set up a `Dialog` and `List` web component from the `@ui5/webcomponents` package, enabling the functionality for users to select their preferred Icehouse clients. Before utilizing these components in the XML, we first need to declare the corresponding namespace. By using `xmlns:webc="@ui5/webcomponents"`, you declare the namespace for UI5 Web Components, allowing their tags to be used with the XML namespace `webc`.
@@ -117,7 +147,9 @@ A dialog is a perfect scenario in which to use a `sap.ui.core.Fragment`. This UI
 	</core:FragmentDefinition>
 	```
 
-## Exercise 6.4 - Implement the Dialog Opening Logic
+### Exercise 6.4 - Implement the Dialog Opening Logic
+
+📋 **Action Required**: Add controller logic to handle the dialog opening functionality.
 
 After creating the dialog, you need to implement the coding to open the dialog.
 
@@ -160,7 +192,9 @@ After creating the dialog, you need to implement the coding to open the dialog.
 
 The `sap.ui.core.mvc.Controller`, which the *Sensors* controller extends, offers the function `loadFragment` to load fragments for usage. By default, the fragment will be added to the dependents aggregation of the view, which allows the fragment to reference models of the view. Additionally, the controller (and subsequently its event handlers) are automatically passed to the fragment.
 
-## Exercise 6.5 - Add a Dialog Opening Button
+### Exercise 6.5 - Add a Dialog Opening Button
+
+📋 **Action Required**: Add a button to trigger the customer selection dialog.
 
 After implementing the dialog opening logic, you need to assign this logic to a control.
 
@@ -187,7 +221,9 @@ After implementing the dialog opening logic, you need to assign this logic to a 
 <br><br>![](images/06_01_003.png)<br><br>
 
 
-## Exercise 6.6 - Implement the 'Select Customer' Logic
+### Exercise 6.6 - Implement the 'Select Customer' Logic
+
+📋 **Action Required**: Add the logic to handle customer selection and filtering.
 
 Now you are able to select the preferred customers, you need to implement the logic to handle the selection.
 
@@ -241,7 +277,9 @@ Now you are able to select the preferred customers, you need to implement the lo
 			}
 	````
 
-## Exercise 6.7 - Assign the two Functions to the Dialog
+### Exercise 6.7 - Assign the two Functions to the Dialog
+
+📋 **Action Required**: Connect the controller functions to the dialog buttons.
 
 One last thing is missing: You need to assign the newly created functions to the dialog.
 
@@ -274,14 +312,24 @@ One last thing is missing: You need to assign the newly created functions to the
 
 ## Summary
 
-Yay! You've successfully completed [Exercise 6 - Add a Dialog using UI5 Web Components](#exercise-6---fragment-containing-a-selectdialog).
+> ✅ **Congratulations!** You've successfully completed [Exercise 6 - Add a Dialog using UI5 Web Components](#exercise-6---fragment-containing-a-selectdialog)!
+> 
+> **What you accomplished**:
+> - ✓ Configured your project for UI5 Web Components
+> - ✓ Installed and set up the necessary tooling extensions
+> - ✓ Created a customer selection dialog with Web Components
+> - ✓ Implemented filtering functionality for customer selection
+> - ✓ Integrated Web Components seamlessly with UI5
 
-Continue to [Exercise 7 - Second View with Navigation](../ex7/README.md).
+---
+
+**📚 Next Steps**: Continue to [Exercise 7 - Second View with Navigation](../ex7/README.md).
 
 ## Further Information
-* Using Web Components: https://ui5.sap.com/#/topic/1c80793df5bb424091954697fc0b2828
-* UI5 Web Components: https://ui5.github.io/webcomponents/
-* Usage of Fragments in UI5: https://ui5.sap.com/#/topic/d6af195124cf430599530668ddea7425
-* `<ui5-button>` (Button) component: https://ui5.github.io/webcomponents/components/main/Button/
-* `<ui5-dialog>` (Dialog) component: https://ui5.github.io/webcomponents/components/Dialog/
-* `<ui5-list>` (List) component: https://ui5.github.io/webcomponents/components/List/
+> 📚 **Additional Resources**:
+> * [Using Web Components](https://ui5.sap.com/#/topic/1c80793df5bb424091954697fc0b2828)
+> * [UI5 Web Components](https://ui5.github.io/webcomponents/)
+> * [Usage of Fragments in UI5](https://ui5.sap.com/#/topic/d6af195124cf430599530668ddea7425)
+> * [`<ui5-button>` (Button) component](https://ui5.github.io/webcomponents/components/main/Button/)
+> * [`<ui5-dialog>` (Dialog) component](https://ui5.github.io/webcomponents/components/Dialog/)
+> * [`<ui5-list>` (List) component](https://ui5.github.io/webcomponents/components/List/)

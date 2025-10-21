@@ -17,8 +17,8 @@ In the last exercise, you will learn how to use the **UI5 Linter** to ensure you
 - [Exercise 4 - Improve Visualization](exercises/ex4/) [*(browse sources)*](exercises/ex4/keepcool.sensormanager/webapp)
 - [Exercise 5 - Filtering With the IconTabBar](exercises/ex5/) [*(browse sources)*](exercises/ex5/keepcool.sensormanager/webapp)
 - [Exercise 6 - Add a Dialog using UI5 Web Components](exercises/ex6/) [*(browse sources)*](exercises/ex6/keepcool.sensormanager/webapp)
-- [Exercise 7 - Second View with Navigation](exercises/ex7/) [(browse sources)](exercises/ex7/keepcool.sensormanager/webapp)
-- [Exercise 8 - Card with NumericHeader](exercises/ex8/) [(browse sources)](exercises/ex8/keepcool.sensormanager/webapp)
+- [Exercise 7 - Second View with Navigation](exercises/ex7/) [(*browse sources*)](exercises/ex7/keepcool.sensormanager/webapp)
+- [Exercise 8 - Card with NumericHeader](exercises/ex8/) [(*browse sources*)](exercises/ex8/keepcool.sensormanager/webapp)
 
 #### UI5 Linter (optional)
 

@@ -2,11 +2,25 @@
 
 # Exercise 2 - Basic UI5 Configuration and View Creation
 
-In this exercise you'll add some content to your application. A new UI5 view showing multiple sensors will be the first part of your app.
+## Background & Context
+> 📖 **What you'll learn**: In this exercise you'll add some content to your application. A new UI5 view showing multiple sensors will be the first part of your app.
 
-## Exercise 2.1 - Adjusting Views
+## Learning Objectives
+> 🎯 **After completing these steps** you will have:
+> - Adjusted and renamed UI5 views for better structure
+> - Added necessary UI5 library dependencies
+> - Configured routing for your application
+> - Created a basic sensor overview page
 
-Easy-UI5 created two views for you: `App.view.xml` and `Main.view.xml`.
+## Exercise Steps
+
+### Exercise 2.1 - Adjusting Views
+
+📋 **Action Required**: Configure your application views for better structure.
+
+> 📖 **Context**: Easy-UI5 created two views for you: `App.view.xml` and `Main.view.xml`. Let's adjust them for our sensor application.
+
+**Step 1: Update App.view.xml**
 
 Let's take a look at the precreated view `App.view.xml` located under `keepcool.sensormanager/webapp/view/App.view.xml`.
 Replace the content as following:
@@ -29,11 +43,17 @@ Replace the content as following:
 </mvc:View>
 ```
 
-You just added an *App* control which has a *pages* aggregation. We will make use of this aggregation to add multiple pages for routing later on in this application.
+> 💡 **Explanation**: You just added an *App* control which has a *pages* aggregation. We will make use of this aggregation to add multiple pages for routing later on in this application.
 
-1. Before we adjust the `Main.view.xml`, let's rename it to `Sensors.view.xml` to be more meaningful.
+**Step 2: Rename Main.view.xml**
 
-2. Now we'll add some content to your newly adjusted UI5 view. Let's start with an empty `sap.m.IconTabBar`.
+1. **Rename the view file**
+   
+   Before we adjust the `Main.view.xml`, let's rename it to `Sensors.view.xml` to be more meaningful.
+
+2. **Add content to the view**
+   
+   Now we'll add some content to your newly adjusted UI5 view. Let's start with an empty `sap.m.IconTabBar`.
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -62,9 +82,15 @@ You just added an *App* control which has a *pages* aggregation. We will make us
 	</mvc:View>
 	````
 
-3. You'll see in the view, that it references a controller called `Sensors`. Alongside the views, Easy-UI5 also created a controller for each view. Therefore, we need to rename the `Main.controller.ts` to `Sensors.controller.ts` as well. The controller is located under `keepcool.sensormanager/webapp/controller`.
+**Step 3: Update the controller**
 
-4. Additionally, we need to rename the class name of the controller from `Main` to `Sensors`.
+3. **Rename the controller file**
+   
+   You'll see in the view, that it references a controller called `Sensors`. Alongside the views, Easy-UI5 also created a controller for each view. Therefore, we need to rename the `Main.controller.ts` to `Sensors.controller.ts` as well. The controller is located under `keepcool.sensormanager/webapp/controller`.
+
+4. **Update the controller class name**
+   
+   Additionally, we need to rename the class name of the controller from `Main` to `Sensors`.
 
 	***keepcool.sensormanager/webapp/controller/Sensors.controller.ts***
 	```ts
@@ -81,16 +107,25 @@ You just added an *App* control which has a *pages* aggregation. We will make us
 	}
 	```
 
-## Exercise 2.2 - Add Dependencies
+### Exercise 2.2 - Add Dependencies
 
-You will use several UI5 libraries like `sap.m` or `sap.f` in your application. The central point for configuring your UI5 application is the `manifest.json` file, which is located at `keepcool.sensormanager/webapp/manifest.json`. For the UI5 tooling it is also necessary, to add these libaries to the ui5.yaml as well.
+📋 **Action Required**: Configure necessary UI5 library dependencies.
 
-1. Open the `manifest.json` file using the Explorer.
-<br><br>
-![](images/02_02_001.png)
+> 📖 **Context**: You will use several UI5 libraries like `sap.m` or `sap.f` in your application. The central point for configuring your UI5 application is the `manifest.json` file, which is located at `keepcool.sensormanager/webapp/manifest.json`. For the UI5 tooling it is also necessary, to add these libaries to the ui5.yaml as well.
 
-2. Go to the section `sap.ui5`.
-3. Replace the libraries in the `dependencies/libs` section. UI5 will take care of loading all the libraries listed here when your app is started.
+1. **Open the manifest.json file**
+   
+   Open the `manifest.json` file using the Explorer.
+   <br><br>
+   ![](images/02_02_001.png)
+
+2. **Navigate to the sap.ui5 section**
+   
+   Go to the section `sap.ui5`.
+
+3. **Update library dependencies**
+   
+   Replace the libraries in the `dependencies/libs` section. UI5 will take care of loading all the libraries listed here when your app is started.
 
     ***keepcool.sensormanager/webapp/manifest.json***
 
@@ -106,7 +141,9 @@ You will use several UI5 libraries like `sap.m` or `sap.f` in your application. 
 			},
 	````
 
-4. Add the `sap.m`, `sap.f` and `sap.ui.layout` dependencies to the ui5.yaml
+4. **Update ui5.yaml dependencies**
+   
+   Add the `sap.m`, `sap.f` and `sap.ui.layout` dependencies to the ui5.yaml
 
 	***keepcool.sensormanager/ui5.yaml***
 
@@ -121,19 +158,29 @@ You will use several UI5 libraries like `sap.m` or `sap.f` in your application. 
 	    - name: themelib_sap_horizon
 	```
 
-> **Note:** Restart the UI5 tooling server
+> ⚠️ **Important**: **Restart the UI5 tooling server**
 >
 > After adjusting the ui5.yaml, make sure to restart the UI5 tooling server in your terminal, so the changes are applied. Stop the server by pressing `CTRL + C` in the terminal and then start the server again by executing `npm run start`.
 
-## Exercise 2.3 - Enable Routing for Sensors.view.xml
+### Exercise 2.3 - Enable Routing for Sensors.view.xml
 
-UI5 comes with a powerful routing API that helps you control the state of your application efficiently. It takes care of displaying the desired UI5 view based on the given browser URL hash.
+📋 **Action Required**: Configure routing for your application.
 
-Let's adjust the `manifest.json` to enable the routing feature for your newly created view.
+> 📖 **Context**: UI5 comes with a powerful routing API that helps you control the state of your application efficiently. It takes care of displaying the desired UI5 view based on the given browser URL hash.
 
-1. Open the `manifest.json` file.
-2. Go to the section `sap.ui5`.
-3. Replace all content inside the `routing` property with the following content:
+**Configure routing in manifest.json**
+
+1. **Open the manifest.json file**
+   
+   Open the `manifest.json` file.
+
+2. **Navigate to the sap.ui5 section**
+   
+   Go to the section `sap.ui5`.
+
+3. **Configure routing settings**
+   
+   Replace all content inside the `routing` property with the following content:
 
 	***keepcool.sensormanager/webapp/manifest.json***
 
@@ -162,37 +209,41 @@ Let's adjust the `manifest.json` to enable the routing feature for your newly cr
 			}
 	````
 
-We changed the *routing* section in the sap.ui5 part of the descriptor. There are three subsections that define the routing and navigation structure of the app:
+> 💡 **Explanation**: We changed the *routing* section in the sap.ui5 part of the descriptor. There are three subsections that define the routing and navigation structure of the app:
+> 
+> **`config`**: This section contains the global router configuration and default values that apply for all routes and targets. We define the router class that we want to use and where our views are located in the app. To load and display views automatically, we also specify which control is used to display the pages and what aggregation should be filled when a new page is displayed.
+> 
+> **`routes`**: Each route defines a name, a pattern, and one or more targets to navigate to when the route has been hit. The pattern is basically the URL part that matches to the route, we define two routes for our app. The first one is a default route that will show the overview page with the content from the previous steps, and the second is the detail route with the URL pattern detail that will show a new page.
+> 
+> **`targets`**: A target defines a view that is displayed, it is associated with one or more routes and it can also be displayed manually from within the app. Whenever a target is displayed, the corresponding view is loaded and shown in the app. In our app we simply define two targets with a view name that corresponds to the target name.
 
-`config`
+4. **Test your application**
+   
+   Open the tab with the application preview and reload it. The application is being updated, and you can see an empty `sap.m.IconTabBar` with an illustrated message.
+   
+   > 💡 **Tip**: [Optional] If you have closed the tab with the application preview accidentally, click the link `http://localhost:8080` in the terminal, afterwards select `index.html` in the new tab that will be opened.
 
-This section contains the global router configuration and default values that apply for all routes and targets. We define the router class that we want to use and where our views are located in the app. To load and display views automatically, we also specify which control is used to display the pages and what aggregation should be filled when a new page is displayed.
-
-`routes`
-
-Each route defines a name, a pattern, and one or more targets to navigate to when the route has been hit. The pattern is basically the URL part that matches to the route, we define two routes for our app. The first one is a default route that will show the overview page with the content from the previous steps, and the second is the detail route with the URL pattern detail that will show a new page.
-
-`targets`
-
-A target defines a view that is displayed, it is associated with one or more routes and it can also be displayed manually from within the app. Whenever a target is displayed, the corresponding view is loaded and shown in the app. In our app we simply define two targets with a view name that corresponds to the target name.
-
-<br>
-
-4. Open the tab with the application preview and reload it. The application is being updated, and you can see an empty `sap.m.IconTabBar` with an illustrated message.
-  * [Optional] If you have closed the tab with the application preview accidentally, click the link `http://localhost:8080` in the terminal, afterwards select `index.html` in the new tab that will be opened.</ul>
-
-<br><br>![](images/02_02_002.png)<br><br>
+   > ✅ **Expected Result**: You should see the following:
+   <br><br>![](images/02_02_002.png)<br><br>
 
 ## Summary
 
-You've now enabled routing for your application and prepared your application for further development. Stay tuned!
+> ✅ **Congratulations!** You've now enabled routing for your application and prepared your application for further development!
+> 
+> **What you accomplished**:
+> - ✓ Restructured and renamed views for better organization
+> - ✓ Added necessary UI5 library dependencies
+> - ✓ Configured application routing
+> - ✓ Created a basic sensor overview page with IconTabBar
 
-Continue to [Exercise 3 - Show Sensor Content](../ex3/README.md).
+---
 
+**📚 Next Steps**: Continue to [Exercise 3 - Show Sensor Content](../ex3/README.md).
 
 ## Further Information
 
-* UI5 Demokit: https://ui5.sap.com/
-* Views in UI5: https://ui5.sap.com/#/topic/91f27e3e6f4d1014b6dd926db0e91070
-* Routing in UI5: https://ui5.sap.com/#/topic/3d18f20bd2294228acb6910d8e8a5fb5
-* SAP Fiori 3: https://experience.sap.com/fiori-design-web/sap-fiori/#sap-fiori-3
+> 📚 **Additional Resources**:
+> * [UI5 Demokit](https://ui5.sap.com/)
+> * [Views in UI5](https://ui5.sap.com/#/topic/91f27e3e6f4d1014b6dd926db0e91070)
+> * [Routing in UI5](https://ui5.sap.com/#/topic/3d18f20bd2294228acb6910d8e8a5fb5)
+> * [SAP Fiori 3](https://experience.sap.com/fiori-design-web/sap-fiori/#sap-fiori-3)

@@ -1,33 +1,45 @@
 # Exercise 9 - Migrate Existing App to Latest Best Practices using UI5 Linter
 
-## Overview
+## Background & Context
+> 📖 **What you'll learn**: In this exercise, we assume there is an existing UI5 app developed several years ago. This app has been extended from time to time but never checked for the usage of deprecated APIs. The goal is to modernize the app and migrate it to the latest best practices using the UI5 Linter.
 
-In this exercise, we assume there is an existing UI5 app developed several years ago. This app has been extended from time to time but never checked for the usage of deprecated APIs. The goal is to modernize the app and migrate it to the latest best practices using the UI5 Linter.
+> 🔧 **About UI5 Linter**: UI5 Linter is a static code analysis tool specifically designed for UI5 applications. It helps to detect various issues such as:
+> - Usage of deprecated UI5 libraries
+> - Usage of deprecated UI5 framework APIs
+> - Usage of global variables
+> - Possible Content Security Policy (CSP) violations
+> - Deprecated component and manifest configurations
 
-UI5 Linter is a static code analysis tool specifically designed for UI5 applications. It helps to detect various issues such as:
+> 💡 **Benefits**: Additionally, UI5 Linter provides detailed information to support solving these issues. For some issues, there is also an auto-fix option. For more information, please refer to the [UI5 Linter README](https://github.com/SAP/ui5-linter/).
 
-- Usage of deprecated UI5 libraries
-- Usage of deprecated UI5 framework APIs
-- Usage of global variables
-- Possible Content Security Policy (CSP) violations
-- Deprecated component and manifest configurations
+## Learning Objectives
+> 🎯 **After completing these steps** you will have:
+> - Learned to use UI5 Linter for code analysis
+> - Identified and fixed deprecated API usage
+> - Modernized an existing UI5 application
+> - Applied latest best practices to legacy code
 
-Additionally, UI5 Linter provides detailed information to support solving these issues. For some issues, there is also an auto-fix option. For more information, please refer to the [UI5 Linter README](https://github.com/SAP/ui5-linter/).
+## Exercise Steps
 
-## Exercise 9.1 - How to Use UI5 Linter
+### Exercise 9.1 - How to Use UI5 Linter
 
-1. Download the App
-   - Download the [existing TODO app](todo.sample.app/) from the `ex9/todo.sample.app/` directory.
+📋 **Action Required**: Set up and run UI5 Linter on an existing application.
 
-2. Install Dependencies
-   - Navigate to the app directory and run the following command to install the necessary dependencies:
+1. **Download the App**
+   
+   Download the [existing TODO app](todo.sample.app/) from the `ex9/todo.sample.app/` directory.
 
-    > ```sh
-    > npm install
-    > ```
+2. **Install Dependencies**
+   
+   Navigate to the app directory and run the following command to install the necessary dependencies:
 
-3. Check the App
-   - Run the linter to check the app for issues:
+   ```sh
+   npm install
+   ```
+
+3. **Check the App**
+   
+   Run the linter to check the app for issues:
 
     > ```sh
     > npm run lint
@@ -120,9 +132,11 @@ Additionally, UI5 Linter provides detailed information to support solving these 
     >
     > However, please note that not all findings may be automatically fixable and could still require manual intervention. Further issue types are under development and will be addressed in future updates. Always review the automatic fixes to ensure they align with your project requirements.
 
-## Exercise 9.2 - Resolve All UI5 Linter Findings
+### Exercise 9.2 - Resolve All UI5 Linter Findings
 
-In the previous step, several issues were identified by the UI5 Linter. Keep in mind that resolving one issue can sometimes address multiple findings. For instance, using `sap.ui.getCore()` can result in two findings: one for the global usage of `sap.ui.getCore` and another for utilizing the deprecated API `getCore`.
+📋 **Action Required**: Fix the identified issues step by step.
+
+> 📖 **Context**: In the previous step, several issues were identified by the UI5 Linter. Keep in mind that resolving one issue can sometimes address multiple findings. For instance, using `sap.ui.getCore()` can result in two findings: one for the global usage of `sap.ui.getCore` and another for utilizing the deprecated API `getCore`.
 
 Your task is to fix all the issues reported by the UI5 Linter, making use of the UI5 Linter tool and the provided documentation for guidance.
 
@@ -447,16 +461,30 @@ Below is a detailed list of all detected issues, along with instructions on how 
 
 ## Summary
 
-This tutorial demonstrated the capabilities of the UI5 Linter in detecting common issues in SAPUI5 applications, offering insights to help automate migrations of existing code or identify areas needing updates to align with current best practices.
+> ✅ **Congratulations!** You've successfully completed [Exercise 9 - Migrate Existing App to Latest Best Practices using UI5 Linter](#exercise-9---migrate-existing-app-to-latest-best-practices-using-ui5-linter)!
+> 
+> **What you accomplished**:
+> - ✓ Learned to use UI5 Linter for comprehensive code analysis
+> - ✓ Identified and fixed deprecated API usage
+> - ✓ Modernized an existing UI5 application
+> - ✓ Applied latest best practices to legacy code
+> - ✓ Addressed various issues including global objects, deprecated events, and namespace errors
+
+> 🔧 **Key Learning**: This tutorial demonstrated the capabilities of the UI5 Linter in detecting common issues in SAPUI5 applications, offering insights to help automate migrations of existing code or identify areas needing updates to align with current best practices.
 
 We addressed various issues such as the usage of global objects and deprecated APIs, or updating deprecated events like `tap` to `press`. We also managed dependencies correctly using `sap.ui.define` or `sap.ui.require.` Additionally, we resolved deprecated controls in XML views, replacing `sap/f/Avatar` with `sap/m/Avatar` and adjusting properties accordingly.
 
 Furthermore, we fixed namespace errors in XML views by correcting the default sap.m namespace for the App control.
 
-The UI5 Linter is a valuable tool for automating parts of the migration process, providing hints to identify and fix issues, and guiding you to relevant documentation on best practices. By leveraging the linter, you can ensure your SAPUI5 applications are up-to-date, maintainable, and aligned with the latest guidelines.
+> 💡 **Key Takeaway**: The UI5 Linter is a valuable tool for automating parts of the migration process, providing hints to identify and fix issues, and guiding you to relevant documentation on best practices. By leveraging the linter, you can ensure your SAPUI5 applications are up-to-date, maintainable, and aligned with the latest guidelines.
+
+---
+
+**🎉 Congratulations!** You have completed all exercises in this workshop series!
 
 ## Further Information
 
-- UI5 Linter: https://github.com/SAP/ui5-linter
-- Best Practices for Developers: https://ui5.sap.com/#/topic/28fcd55b04654977b63dacbee0552712
-- Best Practices for Loading Modules: https://ui5.sap.com/#/topic/00737d6c1b864dc3ab72ef56611491c4
+> 📚 **Additional Resources**:
+> * [UI5 Linter](https://github.com/SAP/ui5-linter)
+> * [Best Practices for Developers](https://ui5.sap.com/#/topic/28fcd55b04654977b63dacbee0552712)
+> * [Best Practices for Loading Modules](https://ui5.sap.com/#/topic/00737d6c1b864dc3ab72ef56611491c4)

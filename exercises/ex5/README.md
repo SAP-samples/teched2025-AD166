@@ -2,15 +2,31 @@
 
 # Exercise 5 - Filtering With the IconTabBar
 
-As your customer needs the full overview to make decisions quickly, you will give them an option to narrow down the list of sensors based on the current sensor temperature.
+## Background & Context
+> 📖 **What you'll learn**: As your customer needs the full overview to make decisions quickly, you will give them an option to narrow down the list of sensors based on the current sensor temperature.
 
-## Exercise 5.1 - Add new IconTabFilters to the Sensors.view.xml
+## Learning Objectives
+> 🎯 **After completing these steps** you will have:
+> - Added filtering capabilities with IconTabFilters
+> - Implemented temperature-based sensor categorization
+> - Enhanced user experience with visual filter indicators
+> - Created interactive filtering functionality
 
-For this, we enhance our `sap.m.IconTabBar` control.
+## Exercise Steps
 
-1. Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
+### Exercise 5.1 - Add new IconTabFilters to the Sensors.view.xml
 
-2. Add `sap.m.IconTabFilter` elements to the `items` aggregation of the `sap.m.IconTabBar` control. They will be visible as icons above the bar, so that the user can click them to filter the list.
+📋 **Action Required**: Enhance the IconTabBar with filtering capabilities.
+
+> 📖 **Context**: For this, we enhance our `sap.m.IconTabBar` control.
+
+1. **Open the Sensors view**
+   
+   Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
+
+2. **Add IconTabFilter elements**
+   
+   Add `sap.m.IconTabFilter` elements to the `items` aggregation of the `sap.m.IconTabBar` control. They will be visible as icons above the bar, so that the user can click them to filter the list.
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -44,19 +60,28 @@ For this, we enhance our `sap.m.IconTabBar` control.
 					...
 	````
 
-3. Let's see if your UI5 application now displays the newly introduced `sap.m.IconTabFilter` elements! Switch to the browser tab with the opened application preview and reload the page.
-<br><br>![](images/05_01_001.png)<br><br>
+3. **Test the IconTabFilter display**
+   
+   Let's see if your UI5 application now displays the newly introduced `sap.m.IconTabFilter` elements! Switch to the browser tab with the opened application preview and reload the page.
+   
+   > ✅ **Expected Result**:
+   <br><br>![](images/05_01_001.png)<br><br>
 
-> [!NOTE]
-> Guidance of [how to use the Icon Tab Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/icontabbar/).
+> 📚 **Design Guidelines**: [How to use the Icon Tab Bar](https://www.sap.com/design-system/fiori-design-web/ui-elements/icontabbar/).
 
-## Exercise 5.2 - Implement the Filtering
+### Exercise 5.2 - Implement the Filtering
 
-In the previous section you've added all necessary controls. Next, you'll implement the filtering logic. Before implementing the filter logic, we need to expose the `Threshold` enum.
+📋 **Action Required**: Add the filtering logic to make the IconTabFilters functional.
 
-1. Open `keepcool.sensormanager/webapp/model/formatter.ts`.
+> 📖 **Context**: In the previous section you've added all necessary controls. Next, you'll implement the filtering logic. Before implementing the filter logic, we need to expose the `Threshold` enum.
 
-2. Export the enum `Threshold`. This will allow you to import it in the controller later on.
+1. **Export the Threshold enum**
+   
+   Open `keepcool.sensormanager/webapp/model/formatter.ts`.
+
+2. **Make enum available for import**
+   
+   Export the enum `Threshold`. This will allow you to import it in the controller later on.
 
 	```ts
 	export const enum Threshold {
@@ -65,15 +90,21 @@ In the previous section you've added all necessary controls. Next, you'll implem
 	}
 	```
 
-3. Open `keepcool.sensormanager/webapp/controller/Sensors.controller.ts`.
+3. **Open the controller**
+   
+   Open `keepcool.sensormanager/webapp/controller/Sensors.controller.ts`.
 
-4. Import the `Threshold` enum, that you just exported from the `formatter.ts` file.
+4. **Import the Threshold enum**
+   
+   Import the `Threshold` enum, that you just exported from the `formatter.ts` file.
 
 	```ts
 	import { Threshold } from "../model/formatter";
 	```
 
-5. Implement the `onSensorSelect` function for filtering the sensor list items by checking their `status` property. We'll also make use of the previously defined threshold and use some filter settings to narrow down the result. `LT` for example means "less than".
+5. **Implement the filtering function**
+   
+   Implement the `onSensorSelect` function for filtering the sensor list items by checking their `status` property. We'll also make use of the previously defined threshold and use some filter settings to narrow down the result. `LT` for example means "less than".
 
 	***sensormanager/webapp/controller/Sensors.controller.ts***
 
@@ -100,19 +131,23 @@ In the previous section you've added all necessary controls. Next, you'll implem
 		}
 	````
 
+**Handle imports and type resolution**
+
 You can again make use of the *quickfix* functionality on hover to add the missing import modules. Note that for `Filter` there are two modules available that will be recommended:
 - `sap/ui/model/Filter`
 - `sap/ui/model/odata/Filter`
 
 Choose the `sap/ui/model/Filter` option, as this application is using a JSONModel.
 
-Knowledge about the DOM types like Event is built-in to TypeScript (note: there is no import in the file for the "Event" type so far!). Due to the name equality, TypeScript assumes the DOM Event class is meant. This is something to keep in mind when dealing with types which have very generic and common names.
+> ⚠️ **TypeScript Note**: Knowledge about the DOM types like Event is built-in to TypeScript (note: there is no import in the file for the "Event" type so far!). Due to the name equality, TypeScript assumes the DOM Event class is meant. This is something to keep in mind when dealing with types which have very generic and common names.
 
 You can simply override by explicitly importing the control's specific event class. In this case, we can import the *SelectEvent* from the `IconTabBar`. Add the following line to the beginning of the file to get rid of the error:
 
 ````ts
 import { IconTabBar$SelectEvent } from "sap/m/IconTabBar";
 ````
+
+**Required imports**
 
 In the end, the following imports need to be present for the filter mechanism to work appropriately:
 
@@ -127,13 +162,19 @@ import { Threshold } from "../model/formatter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 ```
 
-## Exercise 5.3 - Assign the Filtering to the IconTabBar
+### Exercise 5.3 - Assign the Filtering to the IconTabBar
 
-The filtering logic has been written. Next, you need to assign the filtering function to the `select` event of the `sap.m.IconTabBar`.
+📋 **Action Required**: Connect the filtering logic to the IconTabBar.
 
-1. Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
+> 📖 **Context**: The filtering logic has been written. Next, you need to assign the filtering function to the `select` event of the `sap.m.IconTabBar`.
 
-2. Bind the `onSensorSelect` function to the `select` event of the `IconTabBar`. Whenever one of the `sap.m.IconTabFilter` elements is clicked, this function will be called.
+1. **Open the view file**
+   
+   Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
+
+2. **Bind the event handler**
+   
+   Bind the `onSensorSelect` function to the `select` event of the `IconTabBar`. Whenever one of the `sap.m.IconTabFilter` elements is clicked, this function will be called.
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -144,16 +185,26 @@ The filtering logic has been written. Next, you need to assign the filtering fun
 					class="sapUiResponsiveContentPadding">
 	````
 
-3. Let's see if your UI5 application is now able to filter the sensor data correctly. Switch to the browser tab with the opened application preview and reload the page. Click the *Too Hot* icon. Only sensors with too high temperature are displayed.
-<br><br>![](images/05_01_001.png)<br><br>
+3. **Test the filtering functionality**
+   
+   Let's see if your UI5 application is now able to filter the sensor data correctly. Switch to the browser tab with the opened application preview and reload the page. Click the *Too Hot* icon. Only sensors with too high temperature are displayed.
+   
+   > ✅ **Expected Result**:
+   <br><br>![](images/05_01_001.png)<br><br>
 
-## Exercise 5.4 - Display the Total Number of Sensors in Every IconTabFilter
+### Exercise 5.4 - Display the Total Number of Sensors in Every IconTabFilter
 
-Your customer wishes to display the total number of sensors as well. For this, you can introduce the `count` property of `sap.m.IconTabFilter`.
+📋 **Action Required**: Add sensor count display to enhance user experience.
 
-1. Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
+> 📖 **Context**: Your customer wishes to display the total number of sensors as well. For this, you can introduce the `count` property of `sap.m.IconTabFilter`.
 
-2. Make use of an expression binding by adding the `count` property and the expression binding `{=${sensorModel>/sensors}.length}` to the `IconTabFilter` with `key="All"`.
+1. **Open the view file**
+   
+   Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
+
+2. **Add count property with expression binding**
+   
+   Make use of an expression binding by adding the `count` property and the expression binding `{=${sensorModel>/sensors}.length}` to the `IconTabFilter` with `key="All"`.
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -165,16 +216,29 @@ Your customer wishes to display the total number of sensors as well. For this, y
 							count="{=${sensorModel>/sensors}.length}"/>
 	````
 
-3. Let's see if your UI5 application can display the total number of sensors correctly. Switch to the browser tab with the opened application preview and reload the page. Do you see *100*? Yeah!
-<br><br>![](images/05_01_002.png)<br><br>
+3. **Test the sensor count display**
+   
+   Let's see if your UI5 application can display the total number of sensors correctly. Switch to the browser tab with the opened application preview and reload the page. Do you see *100*? Yeah!
+   
+   > ✅ **Expected Result**:
+   <br><br>![](images/05_01_002.png)<br><br>
 
 ## Summary
 
-Hooray! You've successfully completed [Exercise 5 - Filtering with the IconTabBar](#exercise-5---filtering-with-the-icontabbar).
+> ✅ **Congratulations!** You've successfully completed [Exercise 5 - Filtering with the IconTabBar](#exercise-5---filtering-with-the-icontabbar)!
+> 
+> **What you accomplished**:
+> - ✓ Added filtering capabilities with IconTabFilters
+> - ✓ Implemented temperature-based sensor categorization
+> - ✓ Enhanced user experience with visual filter indicators
+> - ✓ Created interactive filtering functionality
 
-Continue to [Exercise 6 - Fragment containing a SelectDialog](../ex6/README.md).
+---
+
+**📚 Next Steps**: Continue to [Exercise 6 - Add a Dialog using UI5 Web Components](../ex6/README.md).
 
 ## Further Information
 
-* Model Filter in UI5: https://ui5.sap.com/#/topic/5295470d7eee46c1898ee46c1b9ad763
-* Expression Binding: https://ui5.sap.com/#/topic/daf6852a04b44d118963968a1239d2c0
+> 📚 **Additional Resources**:
+> * [Model Filter in UI5](https://ui5.sap.com/#/topic/5295470d7eee46c1898ee46c1b9ad763)
+> * [Expression Binding](https://ui5.sap.com/#/topic/daf6852a04b44d118963968a1239d2c0)
