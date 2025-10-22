@@ -20,7 +20,7 @@
 
 > 📖 **Context**: Before using external Web Components packages in your application, start by preparing your project. Add the `ui5-tooling-modules` UI5 Tooling extension and configure your `ui5.yaml` file. The `ui5-tooling-modules` extension allows for handling npm dependencies, including the UI5 Web Components.
 
-**Install the required extension**
+1. **Install the required extension**
 
 Run the following command in the terminal to add the `ui5-tooling-modules` extension to your project:
 
@@ -38,7 +38,7 @@ npm install ui5-tooling-modules --save-dev -rte
 }
 ```
 
-By providing the `-rte` flag to the command, you enable the automatic registration of the custom task and custom middleware to your `ui5.yaml` file.
+> 💡 **Explanation:** By providing the `-rte` flag to the command, you enable the automatic registration of the custom task and custom middleware to your `ui5.yaml` file.
 
 ```yaml
 builder:
@@ -51,6 +51,8 @@ server:
     - name: ui5-tooling-modules-middleware
       afterMiddleware: ui5-tooling-transpile-middleware
 ```
+
+2. **Add additional configuration**
 
 To enable TypeScript support for UI5 Web Components during development, you need to add the following configuration to `ui5-tooling-modules-task` and `ui5-tooling-modules-middleware`. Your `ui5.yaml` file should look like this:
 
@@ -79,7 +81,7 @@ server:
 
 > 📖 **Context**: There are several UI5 Web Components packages available that you can use in your application. In this exercise, we will use the `Dialog` and `List` components from the `@ui5/webcomponents` package.
 
-**Install the Web Components package**
+1. **Install the Web Components package**
 
 To install them, open the terminal and run the following command:
 
@@ -97,7 +99,7 @@ npm install @ui5/webcomponents
 }
 ```
 
-**Generate TypeScript declarations**
+2. **Generate TypeScript declarations**
 
 Then run the `build` command to generate the necessary TypeScript declaration files for the UI5 Web Components in the `node_modules/@ui5/webcomponents` directory.
 
@@ -126,7 +128,8 @@ npm run build
    Enter `CustomerSelectDialog.fragment.xml` as file name.
 <br><br>![](images/06_01_002.png)<br><br>
 
-4. Copy and paste the following content into the newly created `CustomerSelectDialog.fragment.xml`. This step will set up a `Dialog` and `List` web component from the `@ui5/webcomponents` package, enabling the functionality for users to select their preferred Icehouse clients. Before utilizing these components in the XML, we first need to declare the corresponding namespace. By using `xmlns:webc="@ui5/webcomponents"`, you declare the namespace for UI5 Web Components, allowing their tags to be used with the XML namespace `webc`.
+4. **Copy and paste the following content into the newly created `CustomerSelectDialog.fragment.xml`.**
+	> 📖 **Context**: This step will set up a `Dialog` and `List` web component from the `@ui5/webcomponents` package, enabling the functionality for users to select their preferred Icehouse clients. Before utilizing these components in the XML, we first need to declare the corresponding namespace. By using `xmlns:webc="@ui5/webcomponents"`, you declare the namespace for UI5 Web Components, allowing their tags to be used with the XML namespace `webc`.
 
 	***keepcool.sensormanager/webapp/view/CustomerSelectDialog.fragment.xml***
 
@@ -183,8 +186,9 @@ npm run build
 			});
 		}
 	```
+	> 📖 **Context**: The `sap.ui.core.mvc.Controller`, which the *Sensors* controller extends, offers the function `loadFragment` to load fragments for usage. By default, the fragment will be added to the dependents aggregation of the view, which allows the fragment to reference models of the view. Additionally, the controller (and subsequently its event handlers) are automatically passed to the fragment.
 
-	**Note:** Make sure you have the necessary imports at the top of the file.
+	> ⚠️ **Important Note:** Make sure you have the necessary imports at the top of the file.
 
 	```ts
 	import Control from "sap/ui/core/Control";
@@ -194,7 +198,7 @@ npm run build
 	import ListItemStandard from "@ui5/webcomponents/dist/ListItemStandard";
 	```
 
-The `sap.ui.core.mvc.Controller`, which the *Sensors* controller extends, offers the function `loadFragment` to load fragments for usage. By default, the fragment will be added to the dependents aggregation of the view, which allows the fragment to reference models of the view. Additionally, the controller (and subsequently its event handlers) are automatically passed to the fragment.
+
 
 ### Exercise 6.5 - Add a Dialog Opening Button
 
@@ -225,10 +229,10 @@ The `sap.ui.core.mvc.Controller`, which the *Sensors* controller extends, offers
 			...
 	````
 
-📋 **Action Required**: Test the visual changes in your application.
+3. **Test the visual changes in your application**
 
-3. Switch the browser tab to the application preview and refresh the page to see how the user interface of your application changes. Click the menu button in upper right corner.
-<br><br>![](images/06_01_003.png)<br><br>
+Switch the browser tab to the application preview and refresh the page to see how the user interface of your application changes. Click the menu button in upper right corner.
+> ✅ **Expected Result:**<br><br>![](images/06_01_003.png)<br><br>
 
 
 > 📖 **Background & Context**

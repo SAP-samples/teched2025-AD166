@@ -16,7 +16,7 @@
 ## Exercise Steps
 
 
-### Exercise 4.0 - Replacing Hard-Coded Text With i18n Variables
+### Exercise 4.1 - Replacing Hard-Coded Text With i18n Variables
 
 📋 **Action Required**: Implement proper internationalization (i18n) for your application.
 
@@ -82,7 +82,7 @@ cardSubTitle={0}: {1}, {2}: {3}{4}
 temperatureUnit=°C
 ```
 
-### Exercise 4.1 - Enhance Sensors.view.xml
+### Exercise 4.2 - Enhance Sensors.view.xml
 
 📋 **Action Required**: Add visual enhancements to your sensor display.
 
@@ -196,7 +196,7 @@ Just click on *Quick Fix* and select *Add all missing imports*. All required dep
 
 > � **Design Guidelines**: Wonder when to use a Message Toast? Find out more in the [SAP Design System Guidelines for the Message Toast](https://www.sap.com/design-system/fiori-design-web/ui-elements/message-toast/).
 
-### Exercise 4.4 - Create your First Formatter
+### Exercise 4.3 - Create your First Formatter
 
 📋 **Action Required**: Implement custom formatting for visual data presentation.
 
@@ -235,7 +235,7 @@ Just click on *Quick Fix* and select *Add all missing imports*. All required dep
 
 > 💡 **TypeScript Benefits**: You can observe that TypeScript allows to specify the type of the *temperature* parameter. In addition TypeScript allows us to specify a type definition for the function. In this case the *IconColor* as return type. Another advantage of TypeScript are enums. The threshold enum can be used to specify certain types of temperature status for the sensor in this example.
 
-### Exercise 4.5 - Add the Formatter in your View
+### Exercise 4.4 - Add the Formatter in your View
 
 📋 **Action Required**: Connect the formatter to your view for dynamic color display.
 
