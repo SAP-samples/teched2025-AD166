@@ -1,5 +1,3 @@
-[![solution](https://flat.badgen.net/badge/solution/available/green?icon=github)](keepcool.sensormanager)
-
 # Exercise 8 - Card with NumericHeader
 
 ## Background & Context
@@ -80,6 +78,8 @@
 
 > 📖 **Context**: To be able to show the data in your card, you need to assign the correct binding context using the information provided by the navigation step.
 
+📋 **Action Required**: Add controller logic to manage sensor data binding.
+
 1. Open `keepcool.sensormanager/webapp/controller/SensorStatus.controller.ts`.
 
 2. Attach a callback function to the `routeMatched` event to retrieve the selected index and bind it to the current view.
@@ -98,6 +98,8 @@
 			});
 		}
 	````
+
+✅ **Test Your Card**: 
 
 3. Switch to the browser tab where the application preview is opened. Click any sensor. Now the sensor status page contains a card with the customer name.
 <br><br>![](images/08_01_001.png)<br><br>
@@ -203,6 +205,7 @@ Open `keepcool.sensormanager/webapp/model/formatter.ts` and add the formatter fu
 							}"/>
 					</f:header>
 	````
+✅ **Test Your Enhanced Card**: 
 
 6. Switch to the browser tab where the application preview is opened. Click any sensor. Now the sensor status page contains a card with colored temperature information depending on the value of the temperature.
 <br><br>![](images/08_01_003.png)<br><br>

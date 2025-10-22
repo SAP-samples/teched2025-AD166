@@ -151,11 +151,15 @@ npm run build
 
 📋 **Action Required**: Add controller logic to handle the dialog opening functionality.
 
-After creating the dialog, you need to implement the coding to open the dialog.
+> 📖 **Context**: After creating the dialog, you need to implement the coding to open the dialog.
 
-1. Open `keepcool.sensormanager/webapp/controller/Sensors.controller.ts`.
+1. **Open the controller file**
+   
+   Open `keepcool.sensormanager/webapp/controller/Sensors.controller.ts`.
 
-2. Implement the `onCustomerSelect` function to open the dialog. It loads the Fragment and sets the required model and properties.
+2. **Implement the dialog opening function**
+   
+   Implement the `onCustomerSelect` function to open the dialog. It loads the Fragment and sets the required model and properties.
 
 	***keepcool.sensormanager/webapp/controller/Sensors.controller.ts***
 
@@ -196,11 +200,15 @@ The `sap.ui.core.mvc.Controller`, which the *Sensors* controller extends, offers
 
 📋 **Action Required**: Add a button to trigger the customer selection dialog.
 
-After implementing the dialog opening logic, you need to assign this logic to a control.
+> 📖 **Context**: After implementing the dialog opening logic, you need to assign this logic to a control.
 
-1. Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
+1. **Open the view file**
+   
+   Open `keepcool.sensormanager/webapp/view/Sensors.view.xml`.
 
-2. Add a new menu button to the page header and bind its `press` event to the newly created `onCustomerSelect` function.
+2. **Add the menu button**
+   
+   Add a new menu button to the page header and bind its `press` event to the newly created `onCustomerSelect` function.
 
 	***keepcool.sensormanager/webapp/view/Sensors.view.xml***
 
@@ -217,11 +225,15 @@ After implementing the dialog opening logic, you need to assign this logic to a 
 			...
 	````
 
+📋 **Action Required**: Test the visual changes in your application.
+
 3. Switch the browser tab to the application preview and refresh the page to see how the user interface of your application changes. Click the menu button in upper right corner.
 <br><br>![](images/06_01_003.png)<br><br>
 
 
-### Exercise 6.6 - Implement the 'Select Customer' Logic
+> 📖 **Background & Context**
+> 
+> Now that users can visually access the customer selection interface, you need to implement the underlying logic that handles the customer selection and applies appropriate filtering to the sensor data. This involves creating event handlers and filter logic.
 
 📋 **Action Required**: Add the logic to handle customer selection and filtering.
 
@@ -251,6 +263,8 @@ Now you are able to select the preferred customers, you need to implement the lo
 			});
 		}
 	````
+
+📋 **Action Required**: Add cancel handler and update sensor selection logic.
 
 3. Let's also add an `onCustomerSelectCancel` function to abort the selection and close the dialog.
 
@@ -300,6 +314,8 @@ One last thing is missing: You need to assign the newly created functions to the
 		</webc:footer>
 	</webc:Dialog>
 	````
+
+✅ **Test Your Implementation**: 
 
 3. It's demo time! Switch the browser tab to the application preview and refresh the page to see how the user interface of your UI5 application changes. Select the *menu* button in upper right corner. Enter some parts of customer names and check if the customer list is filtered.
 <br><br>![](images/06_01_004.png)<br><br>

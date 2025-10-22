@@ -79,7 +79,7 @@
     > Note: Use "ui5lint --details" to show more information about the findings
     > ```
 
-4. Get Detailed Information
+4. **Get Detailed Information**
    - For more detailed information regarding each issue, run:
 
     > ```sh
@@ -118,7 +118,7 @@
     > 1 fatal errors
     > ```
 
-5. Try Auto-Fix
+5. **Try Auto-Fix**
    - Some issues can be fixed automatically. Run the following command to attempt to fix these issues:
 
     > ```sh
@@ -127,7 +127,8 @@
 
    - You should notice that some of the issues are already resolved automatically.
 
-    > [!NOTE]
+    > ⚠️ **Note**
+    > 
     > While the UI5linter initially offered automatic fixes only for issues of the type 'no-globals', the latest version has expanded its capabilities to address certain deprecations, such as those from the sap/ui/core/Core and sap/ui/core/Configuration API. This enhancement helps streamline the process of updating your code to comply with the latest standards and best practices.
     >
     > However, please note that not all findings may be automatically fixable and could still require manual intervention. Further issue types are under development and will be addressed in future updates. Always review the automatic fixes to ensure they align with your project requirements.
