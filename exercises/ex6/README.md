@@ -343,7 +343,7 @@ One last thing is missing: You need to assign the newly created functions to the
 
 ---
 
-**📚 Next Steps**: Continue to [Exercise 7 - Second View with Navigation](../ex7/README.md).
+**📚 Next Steps**: Continue to [Exercise 7 - Second View with Navigation with Help of Joule](../ex7/README.md).
 
 ## Further Information
 > 📚 **Additional Resources**:

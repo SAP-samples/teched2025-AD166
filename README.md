@@ -10,6 +10,10 @@ By completing these exercises, you'll gain hands-on experience in developing web
 
 In the last exercise, you will learn how to use the **UI5 Linter** to ensure your application follows the latest best practices.
 
+From the list, you can not only access each exercise directly, but also browse the resulting sources and run the resulting app.
+
+Start the exercises [here](exercises/ex0/).
+
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Project Setup Using Easy-UI5](exercises/ex1/) [*(browse sources)*](exercises/ex1/keepcool.sensormanager/webapp)
 - [Exercise 2 - Basic UI5 Configuration and View Creation](exercises/ex2/) [*(browse sources)*](exercises/ex2/keepcool.sensormanager/webapp)
@@ -17,16 +21,45 @@ In the last exercise, you will learn how to use the **UI5 Linter** to ensure you
 - [Exercise 4 - Improve Visualization](exercises/ex4/) [*(browse sources)*](exercises/ex4/keepcool.sensormanager/webapp)
 - [Exercise 5 - Filtering With the IconTabBar](exercises/ex5/) [*(browse sources)*](exercises/ex5/keepcool.sensormanager/webapp)
 - [Exercise 6 - Add a Dialog using UI5 Web Components](exercises/ex6/) [*(browse sources)*](exercises/ex6/keepcool.sensormanager/webapp)
-- [Exercise 7 - Second View with Navigation](exercises/ex7/) [(*browse sources*)](exercises/ex7/keepcool.sensormanager/webapp)
+- [Exercise 7 - Second View with Navigation with Help of Joule](exercises/ex7/) [(*browse sources*)](exercises/ex7/keepcool.sensormanager/webapp)
 - [Exercise 8 - Card with NumericHeader](exercises/ex8/) [(*browse sources*)](exercises/ex8/keepcool.sensormanager/webapp)
 
-#### UI5 Linter (optional)
+#### Exercise UI5 Linter
 
 - [Exercise 9 - Migrate Existing App to Latest Best Practices using UI5 Linter](exercises/ex9/) [*(browse sources)*](exercises/ex9/keepcool.sensormanager/webapp)
 
-From the list, you can not only access each exercise directly, but also browse the resulting sources and run the resulting app.
 
-Start the exercises [here](exercises/ex0/).
+## Working with the Code
+
+Follow these steps to access the working code for any exercise, whether you missed an exercise or encountered an error that you couldn't resolve.
+
+1. **Download the repository**
+    - Navigate to this GitHub repository
+    - Click the green **Code** button
+    - Select **Download ZIP** from the dropdown
+    - Extract the ZIP file to your local machine (creates folder `teched2025-AD166-main`)
+
+2. **Import to SAP Business Application Studio**
+    - Navigate to `teched2025-AD166-main/exercises/exX/` (where *X* is your desired exercise number)
+    - Copy or drag-and-drop the `keepcool.sensormanager` folder into the *Explorer* view of SAP Business Application Studio
+    - Open the `keepcool.sensormanager` folder in SAP Business Application Studio
+
+### Running the Application
+
+3. **Install dependencies**
+    - Open a new terminal in SAP Business Application Studio
+    - Run the following command:
+    ```bash
+    npm install
+    ```
+
+4. **Start the application**
+    - Run the following command in the terminal:
+    ```bash
+    npm run start
+    ```
+    - The application will open automatically in a new browser tab, or follow the terminal link to open it manually
+
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.

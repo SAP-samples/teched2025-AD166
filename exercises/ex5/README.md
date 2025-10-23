@@ -131,7 +131,7 @@
 		}
 	````
 
-**Handle imports and type resolution**
+6. **Handle imports and type resolution**
 
 You can again make use of the *quickfix* functionality on hover to add the missing import modules. Note that for `Filter` there are two modules available that will be recommended:
 - `sap/ui/model/Filter`

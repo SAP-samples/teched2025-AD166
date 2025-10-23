@@ -1,4 +1,4 @@
-# Exercise 7 - Add a Second View with Navigation
+# Exercise 7 - Add a Second View with Navigation with Help of Joule
 
 ## Background & Context
 > 📖 **What you'll learn**: Your customer does not only want to have a broad overview of all their icehouses. In case of an error they'd like to inspect a sensor for recent temperature data. You'll add a second view to display more available data.
