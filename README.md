@@ -10,22 +10,34 @@ By completing these exercises, you'll gain hands-on experience in developing web
 
 In the last exercise, you will learn how to use the **UI5 Linter** to ensure your application follows the latest best practices.
 
-From the list, you can not only access each exercise directly, but also browse the resulting sources and run the resulting app.
+### Exercise Application Development
 
-Start the exercises [here](exercises/ex0/).
+> 🏢 **Scenario**: You're developing for "Keep Cool, Inc.", a company that operates multiple icehouses nationwide. They've recently upgraded their facilities with IoT-enabled sensors that transmit real-time temperature and operational data via internet connectivity. Your mission is to build a modern web application that consumes this sensor data, provides intuitive visualizations, and delivers a comprehensive dashboard for monitoring sensor status - enabling the operations team to quickly identify and respond to potential issues before they impact their cold storage facilities.
+
+<div align="center">
+<img src="exercises/ex7/images/07_01_007.png" width="80%">
+<br>
+</div>
+
+#### Start the exercises [here](exercises/ex0/)
+
+From this list, you can not only access each exercise directly, but also also browse the resulting sources:
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Project Setup Using Easy-UI5](exercises/ex1/) [*(browse sources)*](exercises/ex1/keepcool.sensormanager/webapp)
 - [Exercise 2 - Basic UI5 Configuration and View Creation](exercises/ex2/) [*(browse sources)*](exercises/ex2/keepcool.sensormanager/webapp)
 - [Exercise 3 - Show Sensor Content](exercises/ex3/) [*(browse sources)*](exercises/ex3/keepcool.sensormanager/webapp)
 - [Exercise 4 - Improve Visualization](exercises/ex4/) [*(browse sources)*](exercises/ex4/keepcool.sensormanager/webapp)
-- [Exercise 5 - Filtering With the IconTabBar](exercises/ex5/) [*(browse sources)*](exercises/ex5/keepcool.sensormanager/webapp)
 - [Exercise 6 - Add a Dialog using UI5 Web Components](exercises/ex6/) [*(browse sources)*](exercises/ex6/keepcool.sensormanager/webapp)
 - [Exercise 7 - Second View with Navigation with Help of Joule](exercises/ex7/) [(*browse sources*)](exercises/ex7/keepcool.sensormanager/webapp)
+
+#### Optional Exercises
+- [Exercise 5 - Filtering With the IconTabBar](exercises/ex5/) [*(browse sources)*](exercises/ex5/keepcool.sensormanager/webapp)
 - [Exercise 8 - Card with NumericHeader](exercises/ex8/) [(*browse sources*)](exercises/ex8/keepcool.sensormanager/webapp)
 
-#### Exercise UI5 Linter
+### Exercise UI5 Linter
 
+> 🏢 **Scenario**: In this exercise, we assume there is an existing UI5 app developed several years ago. This app has been extended from time to time but never checked for the usage of deprecated APIs. The goal is to modernize the app and migrate it to the latest best practices using the UI5 Linter.
 - [Exercise 9 - Migrate Existing App to Latest Best Practices using UI5 Linter](exercises/ex9/) [*(browse sources)*](exercises/ex9/keepcool.sensormanager/webapp)
 
 

@@ -5,9 +5,6 @@
 ## Background & Context
 > 📖 **What you'll learn**: In this exercise you'll create a new UI5 application using [Yeoman](https://yeoman.io/) and [Easy-UI5](https://github.com/SAP/generator-easy-ui5/).
 
-## Scenario
-> 🏢 **Business Context**: Your customer "Keep Cool, Inc." is an operator of several icehouses across the country. Recently, they have been upgraded with new sensors with Internet connection, so that their measuring values are available as a service. To make use of this data and improve their internal workflows, the company asked us to provide an application leveraging this sensor data, visualize it, and provide an overview of the current state of each sensor, so that they can react quickly on any issues.
-
 ## Learning Objectives
 > 🎯 **After completing these steps** you will have:
 > - Created your first UI5 application using modern tooling
