@@ -43,7 +43,7 @@ From this list, you can not only access each exercise directly, but also also br
 
 ## Working with the Code
 
-Follow these steps to access the working code for any exercise. This is useful if you want to skip ahead or jump directly to specific exercises, such as the optional ones.
+Follow these steps to access the working code for any exercise. This is useful if you want to skip ahead or jump directly to specific exercises.
 
 1. **Download the repository**
     - Navigate to this GitHub repository
