@@ -10,7 +10,7 @@ By completing these exercises, you'll gain hands-on experience in developing web
 
 In the last exercise, you will learn how to use the **UI5 Linter** to ensure your application follows the latest best practices.
 
-### Exercise Application Development
+### Exercise (A): Application Development
 
 > 🏢 **Scenario**: You're developing for "Keep Cool, Inc.", a company that operates multiple icehouses nationwide. They've recently upgraded their facilities with IoT-enabled sensors that transmit real-time temperature and operational data via internet connectivity. Your mission is to build a modern web application that consumes this sensor data, provides intuitive visualizations, and delivers a comprehensive dashboard for monitoring sensor status - enabling the operations team to quickly identify and respond to potential issues before they impact their cold storage facilities.
 
@@ -31,19 +31,24 @@ From this list, you can not only access each exercise directly, but also also br
 - [Exercise 6 - Add a Dialog using UI5 Web Components](exercises/ex6/) [*(browse sources)*](exercises/ex6/keepcool.sensormanager/webapp)
 - [Exercise 7 - Second View with Navigation with Help of Joule](exercises/ex7/) [(*browse sources*)](exercises/ex7/keepcool.sensormanager/webapp)
 
-#### Optional Exercises
+##### Optional Exercise Steps
 - [Exercise 5 - Filtering With the IconTabBar](exercises/ex5/) [*(browse sources)*](exercises/ex5/keepcool.sensormanager/webapp)
 - [Exercise 8 - Card with NumericHeader](exercises/ex8/) [(*browse sources*)](exercises/ex8/keepcool.sensormanager/webapp)
 
-### Exercise UI5 Linter
+### Exercise (B): UI5 Linter
+<div align="center">
+<img src="exercises/ex9/images/09_01_001.png" width="60%">
+<br>
+<br>
+</div>
 
 > 🏢 **Scenario**: In this exercise, we assume there is an existing UI5 app developed several years ago. This app has been extended from time to time but never checked for the usage of deprecated APIs. The goal is to modernize the app and migrate it to the latest best practices using the UI5 Linter.
 - [Exercise 9 - Migrate Existing App to Latest Best Practices using UI5 Linter](exercises/ex9/) [*(browse sources)*](exercises/ex9/keepcool.sensormanager/webapp)
 
 
-## Working with the Code
+## Use prepared Exercise Solution Code
 
-Follow these steps to access the working code for any exercise. This is useful if you want to skip ahead or jump directly to specific exercises.
+Follow these steps to access the resulting code of each exercise. This is useful if you want to skip ahead or jump directly to specific exercises. For example, to continue with exercise 6, you can import the code of exercise 5 and continue from there.
 
 1. **Download the repository**
     - Navigate to this GitHub repository
@@ -55,8 +60,6 @@ Follow these steps to access the working code for any exercise. This is useful i
     - Navigate to `teched2025-AD166-main/exercises/exX/` (where *X* is your desired exercise number)
     - Copy or drag-and-drop the `keepcool.sensormanager` folder into the *Explorer* view of SAP Business Application Studio
     - Open the `keepcool.sensormanager` folder in SAP Business Application Studio
-
-### Running the Application
 
 3. **Install dependencies**
     - Open a new terminal in SAP Business Application Studio
@@ -84,4 +87,4 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
-Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
