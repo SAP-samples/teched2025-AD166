@@ -56,8 +56,9 @@
    <br><br>![](images/00_01_008.png)
 
 9. **Bookmark for future access**
-   
-   > 💡 **Tip**: Bookmark this URL, so it'll be easier for you to access your dev space within SAP Business Application Studio.
+
+   > [!Tip]
+   > Bookmark this URL, so it'll be easier for you to access your dev space within SAP Business Application Studio.
 
 ## Summary
 
