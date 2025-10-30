@@ -16,7 +16,7 @@
 
 ### Exercise 6.1 - Prepare your Project
 
-📋 **Action Required**: Configure your project for UI5 Web Components.
+📋 **Next Step**: Configure your project for UI5 Web Components.
 
 > 📖 **Context**: Before using external Web Components packages in your application, start by preparing your project. Add the `ui5-tooling-modules` UI5 Tooling extension and configure your `ui5.yaml` file. The `ui5-tooling-modules` extension allows for handling npm dependencies, including the UI5 Web Components.
 
@@ -77,7 +77,7 @@ server:
 
 ### Exercise 6.2 - Install UI5 Web Components Packages
 
-📋 **Action Required**: Install the required UI5 Web Components packages.
+📋 **Next Step**: Install the required UI5 Web Components packages.
 
 > 📖 **Context**: There are several UI5 Web Components packages available that you can use in your application. In this exercise, we will use the `Dialog` and `List` components from the `@ui5/webcomponents` package.
 
@@ -111,7 +111,7 @@ npm run build
 
 ### Exercise 6.3 - Create a new Fragment Definition
 
-📋 **Action Required**: Create a dialog fragment for customer selection.
+📋 **Next Step**: Create a dialog fragment for customer selection.
 
 > 📖 **Context**: A dialog is a perfect scenario in which to use a `sap.ui.core.Fragment`. This UI5 artefact allows you to modularize your code in smaller reusable pieces.
 
@@ -152,7 +152,7 @@ npm run build
 
 ### Exercise 6.4 - Implement the Dialog Opening Logic
 
-📋 **Action Required**: Add controller logic to handle the dialog opening functionality.
+📋 **Next Step**: Add controller logic to handle the dialog opening functionality.
 
 > 📖 **Context**: After creating the dialog, you need to implement the coding to open the dialog.
 
@@ -202,7 +202,7 @@ npm run build
 
 ### Exercise 6.5 - Add a Dialog Opening Button
 
-📋 **Action Required**: Add a button to trigger the customer selection dialog.
+📋 **Next Step**: Add a button to trigger the customer selection dialog.
 
 > 📖 **Context**: After implementing the dialog opening logic, you need to assign this logic to a control.
 
@@ -239,7 +239,7 @@ Switch the browser tab to the application preview and refresh the page to see ho
 > 
 > Now that users can visually access the customer selection interface, you need to implement the underlying logic that handles the customer selection and applies appropriate filtering to the sensor data. This involves creating event handlers and filter logic.
 
-📋 **Action Required**: Add the logic to handle customer selection and filtering.
+📋 **Next Step**: Add the logic to handle customer selection and filtering.
 
 Now you are able to select the preferred customers, you need to implement the logic to handle the selection.
 
@@ -268,7 +268,7 @@ Now you are able to select the preferred customers, you need to implement the lo
 		}
 	````
 
-📋 **Action Required**: Add cancel handler and update sensor selection logic.
+📋 **Next Step**: Add cancel handler and update sensor selection logic.
 
 3. Let's also add an `onCustomerSelectCancel` function to abort the selection and close the dialog.
 
@@ -297,7 +297,7 @@ Now you are able to select the preferred customers, you need to implement the lo
 
 ### Exercise 6.7 - Assign the two Functions to the Dialog
 
-📋 **Action Required**: Connect the controller functions to the dialog buttons.
+📋 **Next Step**: Connect the controller functions to the dialog buttons.
 
 One last thing is missing: You need to assign the newly created functions to the dialog.
 
