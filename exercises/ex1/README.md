@@ -16,7 +16,7 @@
 
 ### Exercise 1.1 - Create a New UI5 Application
 
-📋 **Action Required**: Follow these steps to create your UI5 application.
+📋 **Next Step**: Follow these steps to create your UI5 application.
 
 1. **Open the terminal**
    
@@ -56,7 +56,7 @@
 
 ### Exercise 1.2 - Try out the generated Application
 
-📋 **Action Required**: It's time for a first preview of your newly created application!
+📋 **Next Step**: It's time for a first preview of your newly created application!
 
 > ⚠️ **Important**: Before previewing your application, make sure to change the directory in the terminal to your newly created project:
 

@@ -13,7 +13,7 @@
 
 ### Logon
 
-📋 **Action Required**: Follow these steps to access your development environment.
+📋 **Next Step**: Follow these steps to access your development environment.
 
 1. **Open the SAP Build Lobby**
    
@@ -57,8 +57,7 @@
 
 9. **Bookmark for future access**
 
-   > [!Tip]
-   > Bookmark this URL, so it'll be easier for you to access your dev space within SAP Business Application Studio.
+   >💡 **Tip**: Bookmark this URL, so it'll be easier for you to access your dev space within SAP Business Application Studio.
 
 ## Summary
 

@@ -23,7 +23,7 @@
 
 ### Exercise 9.1 - How to Use UI5 Linter
 
-📋 **Action Required**: Set up and run UI5 Linter on an existing application.
+📋 **Next Step**: Set up and run UI5 Linter on an existing application.
 
 1. **Download the App**
    
@@ -135,7 +135,7 @@
 
 ### Exercise 9.2 - Resolve All UI5 Linter Findings
 
-📋 **Action Required**: Fix the identified issues step by step.
+📋 **Next Step**: Fix the identified issues step by step.
 
 > 📖 **Context**: In the previous step, several issues were identified by the UI5 Linter. Keep in mind that resolving one issue can sometimes address multiple findings. For instance, using `sap.ui.getCore()` can result in two findings: one for the global usage of `sap.ui.getCore` and another for utilizing the deprecated API `getCore`.
 

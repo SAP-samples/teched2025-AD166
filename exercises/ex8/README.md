@@ -16,7 +16,7 @@
 
 ### Exercise 8.1 - Add a Card to SensorStatus.view.xml
 
-📋 **Action Required**: Enhance the sensor status view with card components.
+📋 **Next Step**: Enhance the sensor status view with card components.
 
 1. **Open the SensorStatus view**
    
@@ -74,11 +74,11 @@
 
 ### Exercise 8.2 - Enhance SensorStatus.controller.ts
 
-📋 **Action Required**: Add controller logic to manage sensor data binding.
+📋 **Next Step**: Add controller logic to manage sensor data binding.
 
 > 📖 **Context**: To be able to show the data in your card, you need to assign the correct binding context using the information provided by the navigation step.
 
-📋 **Action Required**: Add controller logic to manage sensor data binding.
+📋 **Next Step**: Add controller logic to manage sensor data binding.
 
 1. Open `keepcool.sensormanager/webapp/controller/SensorStatus.controller.ts`.
 
@@ -106,7 +106,7 @@
 
 ### Exercise 8.3 - Add a NumericHeader to the Card
 
-📋 **Action Required**: Implement a NumericHeader for temperature display.
+📋 **Next Step**: Implement a NumericHeader for temperature display.
 
 To improve the visualization further, you will replace the `sap.f.card.Header` by the `sap.f.cards.NumericHeader` in your newly created card.
 

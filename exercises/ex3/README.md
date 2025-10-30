@@ -16,7 +16,7 @@
 
 ### Exercise 3.1 - Import Sensor Data
 
-📋 **Action Required**: Add sensor data to simulate a data source.
+📋 **Next Step**: Add sensor data to simulate a data source.
 
 > 📖 **Context**: To simulate a source providing sensor data, you'll now add some sensor data to your application.
 
@@ -49,7 +49,7 @@
 
 ### Exercise 3.2 - Configure a Data Service
 
-📋 **Action Required**: Set up the data service configuration for sensor data.
+📋 **Next Step**: Set up the data service configuration for sensor data.
 
 > 📖 **Context**: After adding the sensor data to your application, you'll need to configure the data service which provides the sensor data.
 
@@ -105,7 +105,7 @@
 
 ### Exercise 3.3 - Add a GridList
 
-📋 **Action Required**: Enhance your view with UI5 controls to display sensor data.
+📋 **Next Step**: Enhance your view with UI5 controls to display sensor data.
 
 > 📖 **Context**: After configuring the data service, it's now time to enrich your `Sensors.view.xml` with some fancy UI5 controls!
 
@@ -167,7 +167,7 @@
 
 ### Exercise 3.4 - Add Data Binding
 
-📋 **Action Required**: Connect your UI controls to the sensor data using data binding.
+📋 **Next Step**: Connect your UI controls to the sensor data using data binding.
 
 > 📖 **Context**: After adding the `sap.f.GridList` control, you'll need to connect the control to the sensor data. For this, UI5 provides a mechanism called *Data Binding*.
 

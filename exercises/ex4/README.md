@@ -18,7 +18,7 @@
 
 ### Exercise 4.1 - Replacing Hard-Coded Text With i18n Variables
 
-📋 **Action Required**: Implement proper internationalization (i18n) for your application.
+📋 **Next Step**: Implement proper internationalization (i18n) for your application.
 
 > 📖 **Context**: In your existing UI5 application you've used hard-coded text values. That's OK if you'd like to implement a fast proof of concept. In your productive application no hard-coded text should be used, however, because it would be displayed regardless of the actual browser language the user has configured. Your goal is to build an enterprise-ready application which is fully localized. UI5 comes with a huge set of localization features out of the box, one of which is automatic language selection and text localization.
 
@@ -84,7 +84,7 @@ temperatureUnit=°C
 
 ### Exercise 4.2 - Enhance Sensors.view.xml
 
-📋 **Action Required**: Add visual enhancements to your sensor display.
+📋 **Next Step**: Add visual enhancements to your sensor display.
 
 > 📖 **Context**: To give the customer the best possible overview, add some color to your application. Introduce a new layout and structure for the items, and also show an `sap.ui.core.Icon` there.
 
@@ -149,7 +149,7 @@ Let's take a look at the application and the changes in the item layout of the `
 
 ### Exercise 4.2 - Enhance Sensors.controller.ts
 
-📋 **Action Required**: Add controller logic for enhanced functionality.
+📋 **Next Step**: Add controller logic for enhanced functionality.
 
 > 📖 **Context**: In this exercise you'll enhance your application with some additional controller coding by extending your existing `Sensors.controller.ts` controller.
 
@@ -198,7 +198,7 @@ Just click on *Quick Fix* and select *Add all missing imports*. All required dep
 
 ### Exercise 4.3 - Create your First Formatter
 
-📋 **Action Required**: Implement custom formatting for visual data presentation.
+📋 **Next Step**: Implement custom formatting for visual data presentation.
 
 > 📖 **Context**: Your next goal is to bring some color to the user interface. You'd like to display the icon in a suitable color which is based on the actual temperature of the sensor. To do this, you can use the formatter concept of UI5.
 
@@ -237,7 +237,7 @@ Just click on *Quick Fix* and select *Add all missing imports*. All required dep
 
 ### Exercise 4.4 - Add the Formatter in your View
 
-📋 **Action Required**: Connect the formatter to your view for dynamic color display.
+📋 **Next Step**: Connect the formatter to your view for dynamic color display.
 
 > 📖 **Context**: You're almost done. The last piece is adding the newly created formatter function to the binding of your icon.
 

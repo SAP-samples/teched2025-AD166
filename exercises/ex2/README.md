@@ -16,7 +16,7 @@
 
 ### Exercise 2.1 - Adjusting Views
 
-📋 **Action Required**: Configure your application views for better structure.
+📋 **Next Step**: Configure your application views for better structure.
 
 > 📖 **Context**: Easy-UI5 created two views for you: `App.view.xml` and `Main.view.xml`. Let's adjust them for our sensor application.
 
@@ -109,7 +109,7 @@ Replace the content as following:
 
 ### Exercise 2.2 - Add Dependencies
 
-📋 **Action Required**: Configure necessary UI5 library dependencies.
+📋 **Next Step**: Configure necessary UI5 library dependencies.
 
 > 📖 **Context**: You will use several UI5 libraries like `sap.m` or `sap.f` in your application. The central point for configuring your UI5 application is the `manifest.json` file, which is located at `keepcool.sensormanager/webapp/manifest.json`. For the UI5 tooling it is also necessary, to add these libaries to the ui5.yaml as well.
 
@@ -164,7 +164,7 @@ Replace the content as following:
 
 ### Exercise 2.3 - Enable Routing for Sensors.view.xml
 
-📋 **Action Required**: Configure routing for your application.
+📋 **Next Step**: Configure routing for your application.
 
 > 📖 **Context**: UI5 comes with a powerful routing API that helps you control the state of your application efficiently. It takes care of displaying the desired UI5 view based on the given browser URL hash.
 

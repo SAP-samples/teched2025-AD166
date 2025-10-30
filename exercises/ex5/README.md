@@ -16,7 +16,7 @@
 
 ### Exercise 5.1 - Add new IconTabFilters to the Sensors.view.xml
 
-📋 **Action Required**: Enhance the IconTabBar with filtering capabilities.
+📋 **Next Step**: Enhance the IconTabBar with filtering capabilities.
 
 > 📖 **Context**: For this, we enhance our `sap.m.IconTabBar` control.
 
@@ -71,7 +71,7 @@
 
 ### Exercise 5.2 - Implement the Filtering
 
-📋 **Action Required**: Add the filtering logic to make the IconTabFilters functional.
+📋 **Next Step**: Add the filtering logic to make the IconTabFilters functional.
 
 > 📖 **Context**: In the previous section you've added all necessary controls. Next, you'll implement the filtering logic. Before implementing the filter logic, we need to expose the `Threshold` enum.
 
@@ -164,7 +164,7 @@ import FilterOperator from "sap/ui/model/FilterOperator";
 
 ### Exercise 5.3 - Assign the Filtering to the IconTabBar
 
-📋 **Action Required**: Connect the filtering logic to the IconTabBar.
+📋 **Next Step**: Connect the filtering logic to the IconTabBar.
 
 > 📖 **Context**: The filtering logic has been written. Next, you need to assign the filtering function to the `select` event of the `sap.m.IconTabBar`.
 
@@ -194,7 +194,7 @@ import FilterOperator from "sap/ui/model/FilterOperator";
 
 ### Exercise 5.4 - Display the Total Number of Sensors in Every IconTabFilter
 
-📋 **Action Required**: Add sensor count display to enhance user experience.
+📋 **Next Step**: Add sensor count display to enhance user experience.
 
 > 📖 **Context**: Your customer wishes to display the total number of sensors as well. For this, you can introduce the `count` property of `sap.m.IconTabFilter`.
 
