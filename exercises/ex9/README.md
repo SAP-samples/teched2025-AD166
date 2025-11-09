@@ -27,7 +27,7 @@
 
 1. **Download the App**
    
-   Download the [existing TODO app](todo.sample.app/) from the `ex9/todo.sample.app/` directory.
+   Download the app from the `ex9/todo.sample.app/` directory. Please refer to the [Use prepared Exercise Solution Code](../../README.md#use-prepared-exercise-solution-code) if you need help with downloading and importing the app.
 
 2. **Install Dependencies**
    

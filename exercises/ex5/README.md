@@ -57,7 +57,11 @@
 							key="Hot"/>
 					</items>
 					<content>
+					
 					...
+
+					</content>
+				</IconTabBar>
 	````
 
 3. **Test the IconTabFilter display**
