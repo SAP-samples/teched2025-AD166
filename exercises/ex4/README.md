@@ -47,6 +47,8 @@ cardTitle=Customer: {0}
 locationLabel=Location
 cardSubTitle={0}: {1}, {2}: {3}{4}
 temperatureUnit=°C
+btnSelect=Select
+btnCancel=Cancel
 ````
 
 > 💡 **Note**: These are the texts which are going to be used throughout the following exercises.
@@ -80,6 +82,8 @@ cardTitle=Kunde: {0}
 locationLabel=Ort
 cardSubTitle={0}: {1}, {2}: {3}{4}
 temperatureUnit=°C
+btnSelect=Auswählen
+btnCancel=Abbrechen
 ```
 
 ### Exercise 4.2 - Enhance Sensors.view.xml
