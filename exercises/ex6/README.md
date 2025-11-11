@@ -54,25 +54,31 @@ server:
 
 2. **Add additional configuration**
 
-To enable TypeScript support for UI5 Web Components during development, you need to add the following configuration to `ui5-tooling-modules-task` and `ui5-tooling-modules-middleware`. Your `ui5.yaml` file should look like this:
+To enable TypeScript support for UI5 Web Components during development, you need to add the following configuration to `ui5-tooling-modules-task` and `ui5-tooling-modules-middleware`. Your `builder` and `customMiddleware` blocks inside the `ui5.yaml` file should look like this:
 
 ```yaml
 builder:
   customTasks:
-    - name: ui5-tooling-modules-task
-      afterTask: ui5-tooling-transpile-task
-      configuration:
-        pluginOptions:
-          webcomponents:
-            skipDtsGeneration: false
+   - name: ui5-tooling-transpile-task
+     afterTask: replaceVersion
+   - name: ui5-tooling-modules-task
+     afterTask: ui5-tooling-transpile-task
+     configuration:
+       pluginOptions:
+        webcomponents:
+          skipDtsGeneration: false
 server:
   customMiddleware:
+    - name: ui5-tooling-transpile-middleware
+      afterMiddleware: compression
     - name: ui5-tooling-modules-middleware
       afterMiddleware: ui5-tooling-transpile-middleware
       configuration:
         pluginOptions:
           webcomponents:
             skipDtsGeneration: false
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression
 ```
 
 ### Exercise 6.2 - Install UI5 Web Components Packages
